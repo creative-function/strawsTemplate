@@ -1,0 +1,294 @@
+/* 
+==============================================
+CONTENT:	Project Name Here
+AUTHOR:		Your Name Here
+==============================================
+
+TABLE OF CONTENTS:
+
+0. Reset
+1. Main Layout
+2. Content
+
+==============================================
+*/
+/* 0. Reset ================================= */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* 1. Main Layout ================================= */
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #E7D3C4;
+}
+
+/* 2. Content ================================= */
+@media only screen and (min-width: 480px) {
+	header {
+		width: 100%;
+		height: auto;
+		background-image: url("../img/lee-campbell-512447-unsplash.jpg");
+		background-size: cover;
+		display: -webkit-box;
+		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		        flex-direction: column;
+		align-content: center;
+	}
+	header nav {
+		display: -webkit-box;
+		display: flex;
+		background-color: #262626;
+		opacity: .9;
+		height: auto;
+	}
+	header nav .logo {
+		background-color: white;
+		width: 100%;
+	}
+	header nav .logo .clc-logo {
+		position: relative;
+		width: 50%;
+	}
+	header nav ul {
+		width: 100%;
+	}
+	header nav ul li {
+		display: inline;
+		margin: 5%;
+		text-align: center;
+		color: white;
+	}
+	header .hdr-cta {
+		margin: 10% 0;
+	}
+	header .hdr-cta h1 {
+		margin: 0 auto;
+		width: 100%;
+		color: #ffffff;
+		font-size: 1.5rem;
+		text-align: center;
+	}
+	header .hdr-bttn {
+		width: 100%;
+		display: -webkit-box;
+		display: flex;
+		-webkit-box-pack: center;
+		        justify-content: center;
+		margin: 10% 0;
+	}
+	header .hdr-bttn .bgBttn {
+		background-color: #DD5800;
+		color: #ffffff;
+		width: 50%;
+		font-size: 1rem;
+		padding: 2%;
+		border-radius: 5%;
+		border: 1px solid darkorange;
+	}
+	.body {
+		display: -webkit-box;
+		display: flex;
+	}
+	.body .our-story-img {
+		display: block;
+		width: 50%;
+	}
+	.body .our-story-img img {
+		width: 100%;
+	}
+	.body .our-story-txt {
+		width: 75%;
+	}
+	.body .our-story-txt h1 {
+		font-size: 1.3rem;
+		font-weight: bold;
+		color: #472716;
+		text-align: center;
+		margin: 5%;
+	}
+	.body .our-story-txt p {
+		margin: 5%;
+		font-size: 1rem;
+	}
+	footer {
+		background-color: #262626;
+		opacity: .9;
+		height: auto;
+		color: #ffffff;
+		display: -webkit-box;
+		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		        flex-direction: column;
+	}
+	footer .footr {
+		margin: 5%;
+		align-self: center;
+	}
+	footer .footr h1 {
+		text-align: center;
+		margin: 10%;
+	}
+	footer .footr li {
+		margin: 5% 0;
+		color: #ffffff;
+	}
+}
+
+@media only screen and (min-width: 750px) {
+	header {
+		width: 100%;
+		height: auto;
+		background-image: url("../img/lee-campbell-512447-unsplash.jpg");
+		background-size: cover;
+		display: -webkit-box;
+		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		        flex-direction: column;
+		align-content: center;
+	}
+	header nav {
+		background-color: #262626;
+		opacity: .9;
+		height: auto;
+	}
+	header nav .logo {
+		background-color: white;
+	}
+	header nav .logo .clc-logo {
+		position: relative;
+		left: 25%;
+		width: 50%;
+	}
+	header nav li {
+		text-align: center;
+		color: white;
+		margin-bottom: 2%;
+	}
+	header .hdr-cta {
+		margin: 10% 0;
+	}
+	header .hdr-cta h1 {
+		margin: 0 auto;
+		width: 100%;
+		color: #ffffff;
+		font-size: 1.5rem;
+		text-align: center;
+	}
+	header .hdr-bttn {
+		width: 100%;
+		display: -webkit-box;
+		display: flex;
+		-webkit-box-pack: center;
+		        justify-content: center;
+		margin: 10% 0;
+	}
+	header .hdr-bttn .bgBttn {
+		background-color: #DD5800;
+		color: #ffffff;
+		width: 50%;
+		font-size: 1rem;
+		padding: 2%;
+		border-radius: 5%;
+		border: 1px solid darkorange;
+	}
+	.body {
+		height: 100%;
+		margin: 5%;
+	}
+	.body .our-story-img {
+		display: none;
+	}
+	.body .our-story h1 {
+		font-size: 1.3rem;
+		font-weight: bold;
+		color: #472716;
+		text-align: center;
+	}
+	.body .our-story p {
+		margin: 5%;
+		font-size: 1.1rem;
+	}
+	footer {
+		background-color: #262626;
+		opacity: .9;
+		height: auto;
+		color: #ffffff;
+		display: -webkit-box;
+		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		        flex-direction: column;
+	}
+	footer .footr {
+		margin: 5%;
+		align-self: center;
+	}
+	footer .footr h1 {
+		text-align: center;
+		margin: 10%;
+	}
+	footer .footr li {
+		margin: 5% 0;
+		color: #ffffff;
+	}
+}
+
+/*# sourceMappingURL=tablet.css.map */
