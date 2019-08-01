@@ -67,13 +67,82 @@ table {
 	border-spacing: 0;
 }
 
+/* 
+==============================================
+CONTENT:	Project Name Here
+AUTHOR:		Your Name Here
+==============================================
+
+TABLE OF CONTENTS:
+
+0. Reset
+1. Main Layout
+2. Content
+
+==============================================
+*/
+/* 0. Reset ================================= */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
 /* 1. Main Layout ================================= */
 * {
 	box-sizing: border-box;
 }
 
 body {
-	background: #D72E2D;
+	background: #ED4040;
 }
 
 /* 2. Content ================================= */
@@ -379,6 +448,152 @@ pages for .scss pages
 		-webkit-transform: scale(1.5);
 		        transform: scale(1.5);
 	}
+}
+
+/* 1. Main Layout ================================= */
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background: #ED4040;
+}
+
+/* 2. Content ================================= */
+section#nav-top {
+	position: relative;
+	z-index: 999;
+}
+
+section#nav-top ul {
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	        flex-direction: row;
+	-webkit-box-pack: end;
+	        justify-content: flex-end;
+}
+
+section#nav-top ul li {
+	margin-left: 10px;
+	padding: 5px;
+}
+
+section.psuedo-circle {
+	position: relative;
+	height: 25px;
+	top: -50px;
+	left: 100px;
+}
+
+section#hero #hero-wrapper {
+	width: 90%;
+	margin: 0 auto;
+}
+
+section#hero #hero-wrapper .hero-title {
+	position: relative;
+	padding: 2%;
+}
+
+section#hero #hero-wrapper .hero-title h1 {
+	font-size: 3em;
+}
+
+section#hero #hero-wrapper .hero-title p {
+	width: 70%;
+}
+
+section#hero #hero-wrapper .hero-desc {
+	margin-top: 5%;
+	width: 100%;
+	position: relative;
+	background-color: yellow;
+}
+
+section#hero #hero-wrapper .hero-desc .hero-desc-text {
+	width: 100%;
+	position: absolute;
+	top: 100px;
+}
+
+section#hero #hero-wrapper .hero-desc .hero-desc-text p {
+	width: 50%;
+	border-top: 2px solid white;
+	padding: 2%;
+}
+
+section#hero #hero-wrapper .hero-desc .hero-desc-text .hero-anchor {
+	position: absolute;
+	width: 100%;
+}
+
+section#hero #hero-wrapper .hero-desc .hero-desc-text .hero-anchor img.hero-desc-img {
+	position: relative;
+	bottom: 270px;
+	left: 80px;
+	width: 80%;
+}
+
+section#hero #hero-wrapper .hero-desc .hero-desc-text .hero-anchor #jump-buttons {
+	position: relative;
+	top: -250px;
+}
+
+section#hero #hero-wrapper .hero-desc .hero-desc-text .hero-anchor #jump-buttons button {
+	width: 30%;
+	padding: 2%;
+	color: white;
+	background-color: #ED4040;
+	border: 2px solid white;
+}
+
+section#hero #hero-wrapper .hero-desc .hero-desc-text .hero-anchor #jump-buttons .hamburger-menu {
+	float: right;
+	margin: 20px;
+}
+
+section#hero #hero-wrapper .hero-desc .hero-desc-text .hero-anchor #jump-buttons .hamburger-menu h2 {
+	color: white;
+}
+
+section#parralax {
+	margin-top: 150%;
+	width: 100%;
+	height: auto;
+}
+
+section#parralax .para-wrapper {
+	width: 100%;
+	height: auto;
+	background-color: purple;
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	        flex-direction: row;
+}
+
+section#parralax .para-wrapper .para-imgs {
+	width: 50%;
+	border: 2px solid goldenrod;
+	position: relative;
+}
+
+section#parralax .para-wrapper .para-imgs img {
+	width: 100%;
+	z-index: 999;
+}
+
+section#parralax .para-wrapper .para-imgs .para_cls1 {
+	position: relative;
+	top: 0;
+	z-index: 1;
+}
+
+section#parralax .para-wrapper .para-text {
+	width: 50%;
 }
 
 /*# sourceMappingURL=main.css.map */

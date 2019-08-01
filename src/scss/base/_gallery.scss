@@ -1,0 +1,315 @@
+/* 
+==============================================
+CONTENT:	Project Name Here
+AUTHOR:		Your Name Here
+==============================================
+
+TABLE OF CONTENTS:
+
+0. Reset
+1. Main Layout
+2. Content
+
+==============================================
+*/
+
+/* 0. Reset ================================= */
+@import 'reset';
+@import 'base/media';
+@import 'base/colors';
+@import 'base/fonts';
+
+
+
+
+/* 1. Main Layout ================================= */
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background: $gridRed;
+}
+
+/* 2. Content ================================= */
+
+section#nav-section{
+	width: 100%;
+	border-bottom: 3px white solid;
+	.nav-menu{
+
+		display: flex;
+		flex-direction: column;
+
+		@media#{$tablet}{
+			flex-direction: row;
+			justify-content: space-between;
+		}
+
+		.nav-logo{
+			width:20%;
+			margin:0 auto;
+			img{
+				width: 100%;
+			}
+
+			@media#{$tablet}{
+				margin: 0 0;
+				img{
+					width: 50%;
+				}
+			}
+
+			@media#{$desktop}{
+				img{
+					width: 35%;
+				}
+			}
+			
+		}
+
+		nav{
+			padding:20px;
+			ul{
+				color:white;
+				text-decoration: none;
+				display: flex;
+				font-family: $fontOpen;
+				justify-content: center;
+				
+				a{
+					padding:5px;
+					margin:10px;
+					text-decoration: none;
+				}
+				a:visited{
+					text-decoration: none;
+					color:$gridWhite;
+				}
+			}
+		}
+	}
+}
+
+
+section#titleCap{
+	
+	.page-title{
+
+		margin: 0 auto;
+		width: 80%;
+		text-align: center;
+		
+		h1{
+			font-family:$fontNun;
+			font-size: 3em;
+			color: $gridWhite;
+			margin: 5%;
+		}
+
+		.snippet{
+			font-family:$fontOpen;
+			font-size: 1.15em;
+			line-height: 1.5em;
+			color: $gridWhite;
+			padding: 10px;
+
+			@media#{$tablet}{
+				width:50%;
+				margin: 0 auto;
+			}
+
+		}
+	}
+}
+
+
+section#portfolio.layout.layout-portfolio{
+    padding: 20px 0;
+   
+
+    .container{
+        width:95%;
+        margin:0 auto;
+        max-width:1440px;
+		position:relative;
+		
+    }
+
+    .portfolio-grid{
+        padding: 25px 0;
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+		justify-content: space-between;
+		
+		// &::after{
+		// 	content:"";
+		// 	flex:auto; 
+		// }
+
+        .single-project{
+            width:100%;
+			text-align: center;
+			margin:15px 0;
+			position: relative;
+			padding:0 15px;
+			height:275px;
+			background-size: cover;
+			background-image: url('/dist/img/straws.jpg');
+			transition: all 0.2s ease-out;
+			
+			 
+			@media#{$mobile}{
+				width:49%;
+				height:250px;
+			}
+		
+			@media#{$tablet}{ 
+				width:29%;
+				height:200px;
+			}
+		
+		   @media#{$desktop}{
+				width:24%;
+				height:200px;
+			}
+
+        }
+	}
+	
+	
+
+	
+
+	.inner{
+
+		.img-overlay{
+			
+			width:100%;
+			height: 100%;
+			background-color:$gridHeadingTint;
+			position: absolute;
+			top:0;
+			left:0;
+			
+			
+			.text-container{
+				position:absolute;
+				top:50%;
+				left:0;
+				transform:translateY(-50%);
+				width:100%;
+				padding:0 20px;
+				color:$gridWhite;
+				font-family: $fontOpen;
+				font-size: 1.5em;
+
+				
+				.project-subtitle{
+					display: block;
+					color: $gridGold;
+					font-family: $fontNun;
+					@media#{$desktop}{
+						display: none;
+						margin-top:10px;
+					}
+				}
+			}
+
+			&:hover{
+
+				@media#{$desktop}{
+
+					.project-subtitle{
+						display: block;
+						animation: slideDown .3s ease-in-out forwards;
+						transition: all;
+						
+					}
+				}
+			}
+		}
+
+	}
+}
+
+
+/* 
+
+homework:
+kill animations in mobile, trigger animnations at 1040px and above (make variable for it)
+canyonroadfilms.com/directors
+// free use images, set as css background 
+//image overlay
+//title with animation
+
+
+
+&::after{
+    content:"";
+    flex:auto; 
+}
+
+.single project{
+
+    width:100;
+    text-align: center;
+    margin:15px 0;
+    position: relative;
+    padding:0 15px;
+    height:275px;
+    transition: all 0.2s ease-out;
+    
+    
+    @media(min-width:768px){
+        width:50%
+        height:250px;
+    }
+
+    @media(min-width:992px){ 
+        width:33.3%
+        height:200px;
+    }
+
+   @media(min-width:1200px){
+        width:25%
+        height:200px;
+    }
+
+    &:focus,
+    &:active{
+        outline:0pxl
+    }
+
+    &:hover{
+        .text-container{
+
+        }
+    }
+
+
+}
+
+.text-container{
+    position:absolute;
+    top:50%;
+    left:0;
+    transform:translateY(-50%)
+    width:100%:
+    padding:0 20px
+}
+
+SCSS SUB-FOLDERS
+base folder for variables for breakpoints, fonts, colors. your hard-coded settings 
+vendor folder for outside libraries and stuff, downloaded assets, icon sets, third party vendors etc
+pages for .scss pages 
+*/
+
+
+@keyframes slideDown{
+	50%{transform: scale(2);}
+	90% {transform: translateY(70%);transform: rotate(20deg);}
+	100%{transform: scale(1.5);}
+}
