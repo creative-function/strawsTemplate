@@ -481,6 +481,7 @@ section#nav-top ul li {
 }
 
 section.psuedo-circle {
+	display: none;
 	position: relative;
 	height: 25px;
 	top: -50px;
@@ -570,31 +571,60 @@ section#parralax .para-wrapper {
 	background-color: purple;
 	display: -webkit-box;
 	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	        flex-direction: column;
+}
+
+section#parralax .para-wrapper .wrap_product {
+	display: -webkit-box;
+	display: flex;
 	-webkit-box-orient: horizontal;
 	-webkit-box-direction: normal;
 	        flex-direction: row;
+	width: 100%;
+	background-color: yellow;
+	margin-top: 20px;
 }
 
-section#parralax .para-wrapper .para-imgs {
+section#parralax .para-wrapper .wrap_product .product_imgs {
 	width: 50%;
 	border: 2px solid goldenrod;
 	position: relative;
 }
 
-section#parralax .para-wrapper .para-imgs .para-img1 {
+section#parralax .para-wrapper .wrap_product .product_imgs .prod-img {
+	margin-top: 100px;
 	background-size: cover;
 	background-image: url("/dist/img/circle.svg");
 	background-position-x: 100%;
 }
 
-section#parralax .para-wrapper .para-imgs .para-img1 .straw1 {
+section#parralax .para-wrapper .wrap_product .product_imgs .prod-img .straw_1 {
 	width: 100%;
 	position: relative;
 	top: -50px;
 }
 
-section#parralax .para-wrapper .para-text {
+section#parralax .para-wrapper .wrap_product .product_imgs .prod-img .straw_2 {
+	width: 100%;
+	position: relative;
+	top: -30px;
+}
+
+section#parralax .para-wrapper .wrap_product .product_imgs .prod-img .straw_3 {
+	width: 100%;
+	position: relative;
+	top: -20px;
+}
+
+section#parralax .para-wrapper .wrap_product .product_text {
 	width: 50%;
+}
+
+section#parralax .para-wrapper .wrap_product .product_text .text {
+	border: 1px solid black;
+	padding: 20px;
 }
 
 /*# sourceMappingURL=main.css.map */
