@@ -581,15 +581,16 @@ section#parralax .para-wrapper .para-imgs {
 	position: relative;
 }
 
-section#parralax .para-wrapper .para-imgs img {
-	width: 100%;
-	z-index: 999;
+section#parralax .para-wrapper .para-imgs .para-img1 {
+	background-size: cover;
+	background-image: url("/dist/img/circle.svg");
+	background-position-x: 100%;
 }
 
-section#parralax .para-wrapper .para-imgs .para_cls1 {
+section#parralax .para-wrapper .para-imgs .para-img1 .straw1 {
+	width: 100%;
 	position: relative;
-	top: 0;
-	z-index: 1;
+	top: -50px;
 }
 
 section#parralax .para-wrapper .para-text {

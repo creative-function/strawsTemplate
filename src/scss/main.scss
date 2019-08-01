@@ -160,15 +160,17 @@ section#parralax{
 			width:50%;
 			border:2px solid goldenrod;
 			position: relative;
+			
+			.para-img1{
+				background-size:cover; 
+				background-image: url("/dist/img/circle.svg");
+				background-position-x: 100%;
 
-			img{
-				width:100%;
-				z-index: 999;
-			}
-			.para_cls1{
-				position: relative;
-				top:0;
-				z-index: 1;
+				.straw1{
+					width:100%;
+					position: relative;
+					top:-50px;
+				}
 			}
 		}
 
