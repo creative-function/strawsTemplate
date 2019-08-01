@@ -152,6 +152,7 @@ section#parralax{
 	height: auto;
 
 	.para-wrapper{
+		min-width: 360px;
 		width:100%;
 		height: auto;
 		background-color: purple;
@@ -173,9 +174,8 @@ section#parralax{
 				.prod-img{
 					margin-top:100px;
 					background-size:cover; 
-					background-image: url("/dist/img/circle.svg");
 					background-position-x: 100%;
-	
+				
 					.straw_1{
 						width:100%;
 						position: relative;
@@ -194,14 +194,26 @@ section#parralax{
 						top:-20px;
 					}
 				}
+
+				.prod-img_1{
+					background-image: url("/dist/img/circle_p.png");
+				}
+
+				.prod-img_2{
+					background-image: url("/dist/img/circle_y.png");
+				}
+
+				.prod-img_3{
+					background-image: url("/dist/img/circle_b.png");
+				}
 			}
 	
 			.product_text{
 				width:50%;
-				//position: relative;
-				
+
 				.text{
-					//position: absolute;
+					position: relative;
+					top:50%;
 					border:1px solid black;
 					padding:20px;	
 				}
