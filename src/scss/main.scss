@@ -67,16 +67,13 @@ section#hero{
 	min-height: 100vh;
 	#hero-wrapper{
 		position: absolute;
-		//overflow: hidden;
 		top:0;
 		bottom:0;
 		left:0;
 		right:0;
-		//background-color:rgb(23, 218, 143);
-		
+	
 		.hero-title{
 			position: absolute;
-			///z-index: 999;
 			padding:5%;
 			h1{
 				font-size: 2.8em;
@@ -89,7 +86,6 @@ section#hero{
 		.hero-desc{
 			margin-top:5%;
 			width: 100%;
-			//background-color:yellow;
 
 			.hero-desc-wrapper{
 			
@@ -106,7 +102,7 @@ section#hero{
 					.hero-text{
 						position: relative;
 						width:164%;
-						left:25%:
+						left:25%;
 						border-top: 2px solid white;
 						padding:2%;
 					}
@@ -163,7 +159,7 @@ section#parralax{
 		min-width: 360px;
 		width:100%;
 		height: auto;
-		background-color: purple;
+		//background-color: purple;
 		display: flex;
 		flex-direction: column;
 
@@ -171,12 +167,12 @@ section#parralax{
 			display: flex;
 			flex-direction: row;
 			width:100%;
-			background-color: yellow;
+			//background-color: yellow;
 			margin-top:20px;
 	
 			.product_imgs{
-				width:50%;
-				border:2px solid goldenrod;
+				width:40%;
+				//border:2px solid goldenrod;
 				position: relative;
 				
 				.prod-img{
@@ -217,15 +213,29 @@ section#parralax{
 			}
 	
 			.product_text{
-				width:50%;
+				width:55%;
 				display: flex;
 				flex-direction: column;
 				justify-content: center;
 
 				.text{
-				
-					border:1px solid black;
-					padding:20px;	
+					width: 100%;
+					margin:5%;
+					
+				}
+
+				.prod_title{
+					width:50%;
+					padding-top:5%;
+					border-top:2px solid white;
+				}
+
+				.prod_cta{
+					font-size: 1.9em;
+				}
+
+				.prod_desc{
+					//color:white;
 				}
 	
 		
