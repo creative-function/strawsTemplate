@@ -455,8 +455,17 @@ pages for .scss pages
 	box-sizing: border-box;
 }
 
+html {
+	width: 100%;
+}
+
 body {
 	background: #ED4040;
+	background-image: url("/dist/img/circle_g.png");
+	background-repeat: no-repeat;
+	background-size: 110%;
+	background-position-x: -150%;
+	background-position-y: -15%;
 }
 
 /* 2. Content ================================= */
@@ -480,26 +489,26 @@ section#nav-top ul li {
 	padding: 5px;
 }
 
-section.psuedo-circle {
-	display: none;
+section#hero {
 	position: relative;
-	height: 25px;
-	top: -50px;
-	left: 100px;
+	min-height: 100vh;
 }
 
 section#hero #hero-wrapper {
-	width: 90%;
-	margin: 0 auto;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
 }
 
 section#hero #hero-wrapper .hero-title {
-	position: relative;
-	padding: 2%;
+	position: absolute;
+	padding: 5%;
 }
 
 section#hero #hero-wrapper .hero-title h1 {
-	font-size: 3em;
+	font-size: 2.8em;
 }
 
 section#hero #hero-wrapper .hero-title p {
@@ -509,40 +518,58 @@ section#hero #hero-wrapper .hero-title p {
 section#hero #hero-wrapper .hero-desc {
 	margin-top: 5%;
 	width: 100%;
-	position: relative;
-	background-color: yellow;
 }
 
-section#hero #hero-wrapper .hero-desc .hero-desc-text {
+section#hero #hero-wrapper .hero-desc .hero-desc-wrapper {
 	width: 100%;
-	position: absolute;
-	top: 100px;
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	        flex-direction: row;
 }
 
-section#hero #hero-wrapper .hero-desc .hero-desc-text p {
-	width: 50%;
+section#hero #hero-wrapper .hero-desc .hero-desc-wrapper .hero-desc-text {
+	width: 30%;
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	        flex-direction: column;
+	-webkit-box-pack: center;
+	        justify-content: center;
+}
+
+section#hero #hero-wrapper .hero-desc .hero-desc-wrapper .hero-desc-text .hero-text {
+	position: relative;
+	width: 100%;
 	border-top: 2px solid white;
 	padding: 2%;
 }
 
-section#hero #hero-wrapper .hero-desc .hero-desc-text .hero-anchor {
-	position: absolute;
+section#hero #hero-wrapper .hero-desc .hero-desc-wrapper .hero-desc-img {
+	width: 70%;
+}
+
+section#hero #hero-wrapper .hero-desc .hero-desc-wrapper .hero-desc-img img.hero-img {
+	width: 100%;
+	position: relative;
+	right: 8px;
+}
+
+section#hero #hero-wrapper #jump-buttons {
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	        flex-direction: row;
+	-webkit-box-pack: space-evenly;
+	        justify-content: space-evenly;
+	margin-top: 30px;
 	width: 100%;
 }
 
-section#hero #hero-wrapper .hero-desc .hero-desc-text .hero-anchor img.hero-desc-img {
-	position: relative;
-	bottom: 270px;
-	left: 80px;
-	width: 80%;
-}
-
-section#hero #hero-wrapper .hero-desc .hero-desc-text .hero-anchor #jump-buttons {
-	position: relative;
-	top: -250px;
-}
-
-section#hero #hero-wrapper .hero-desc .hero-desc-text .hero-anchor #jump-buttons button {
+section#hero #hero-wrapper #jump-buttons button {
 	width: 30%;
 	padding: 2%;
 	color: white;
@@ -550,17 +577,18 @@ section#hero #hero-wrapper .hero-desc .hero-desc-text .hero-anchor #jump-buttons
 	border: 2px solid white;
 }
 
-section#hero #hero-wrapper .hero-desc .hero-desc-text .hero-anchor #jump-buttons .hamburger-menu {
+section#hero #hero-wrapper #jump-buttons .hamburger-menu {
+	display: none;
 	float: right;
 	margin: 20px;
 }
 
-section#hero #hero-wrapper .hero-desc .hero-desc-text .hero-anchor #jump-buttons .hamburger-menu h2 {
+section#hero #hero-wrapper #jump-buttons .hamburger-menu h2 {
 	color: white;
 }
 
 section#parralax {
-	margin-top: 150%;
+	margin-top: 5%;
 	width: 100%;
 	height: auto;
 }
@@ -632,11 +660,16 @@ section#parralax .para-wrapper .wrap_product .product_imgs .prod-img_3 {
 
 section#parralax .para-wrapper .wrap_product .product_text {
 	width: 50%;
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	        flex-direction: column;
+	-webkit-box-pack: center;
+	        justify-content: center;
 }
 
 section#parralax .para-wrapper .wrap_product .product_text .text {
-	position: relative;
-	top: 50%;
 	border: 1px solid black;
 	padding: 20px;
 }

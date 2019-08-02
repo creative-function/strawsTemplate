@@ -28,8 +28,18 @@ TABLE OF CONTENTS:
 	box-sizing: border-box;
 }
 
+html{
+	width:100%;
+	
+}
 body {
 	background: $gridRed;
+	background-image: url("/dist/img/circle_g.png");
+	background-repeat: no-repeat;
+	background-size: 150%;
+	background-position-x:-55%; 
+	background-position-y:-15%; 
+	
 }
 
 /* 2. Content ================================= */
@@ -52,102 +62,100 @@ section#nav-top{
 }
 
 
-section.psuedo-circle{
-
-	display: none;
-	position: relative;
-	height: 25px;
-	top:-50px;
-	left:100px;
-	#cls{
-		//position: absolute;
-		//right:110px;
-		//z-index: 999;
-	}
-}
-
 section#hero{
-		
-
+	position: relative;
+	min-height: 100vh;
 	#hero-wrapper{
-		width:90%;
-		margin:0 auto;
+		position: absolute;
+		//overflow: hidden;
+		top:0;
+		bottom:0;
+		left:0;
+		right:0;
 		//background-color:rgb(23, 218, 143);
 		
 		.hero-title{
-			position: relative;
+			position: absolute;
 			///z-index: 999;
-			padding:2%;
+			padding:5%;
 			h1{
-				font-size: 3em;
+				font-size: 2.8em;
 			}
 			p{
-				width: 70%;
+				width: 85%;
 			}
 		}
 
 		.hero-desc{
 			margin-top:5%;
 			width: 100%;
-			position: relative;
-			background-color:yellow;
+			//background-color:yellow;
 
-			.hero-desc-text{
-				//background-color: aqua;
+			.hero-desc-wrapper{
+			
 				width:100%;
-				position: absolute;
-				top:100px;
-				p{
-					width: 50%;
-					border-top: 2px solid white;
-					padding:2%;
+				display: flex;
+				flex-direction: row;
+
+				.hero-desc-text{
+					width: 30%;
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+
+					.hero-text{
+						position: relative;
+						width:164%;
+						left:25%:
+						border-top: 2px solid white;
+						padding:2%;
+					}
 				}
 		
-				.hero-anchor{
-					//background-color: goldenrod;
-					position: absolute;
-					width:100%;
-					img.hero-desc-img{
+				.hero-desc-img{
+					width:70%;
+					
+					img.hero-img{
+						width: 100%;
 						position: relative;
-						bottom:270px;
-						left:80px;
-						width: 80%;
-					}
-			
-					#jump-buttons{
-						position: relative;
-						top:-250px;
-						//width: 100%;
-						//margin-left:-5%;
-						
-						button{
-							width:30%;
-							padding:2%;
-							color:white;
-							background-color: $gridRed;
-							border: 2px solid white;
-						}
-
-						.hamburger-menu{
-							float:right;
-							margin:20px;
-
-							h2{
-								color:white;
-							}
-
-						}
+						right:8px;
 					}
 				}
 			}
 
 		}
 
+		#jump-buttons{
+			display: flex;
+			flex-direction: row;
+			justify-content: space-evenly;
+			margin-top:30px;
+			width: 100%;
+			button{
+				width:30%;
+				padding:2%;
+				color:white;
+				background-color: $gridRed;
+				border: 2px solid white;
+			}
+
+			.hamburger-menu{
+				display: none;
+				float:right;
+				margin:20px;
+
+				h2{
+					color:white;
+				}
+
+			}
+		}
+
 	}
 }
 
 section#parralax{
-	margin-top:150%;
+	margin-top:5%;
 	width:100%;
 	height: auto;
 
@@ -210,10 +218,12 @@ section#parralax{
 	
 			.product_text{
 				width:50%;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
 
 				.text{
-					position: relative;
-					top:50%;
+				
 					border:1px solid black;
 					padding:20px;	
 				}
