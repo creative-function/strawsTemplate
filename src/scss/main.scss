@@ -19,7 +19,7 @@ TABLE OF CONTENTS:
 @import 'base/colors';
 @import 'base/fonts';
 @import 'base/gallery';
-
+@import 'base/_about';
 
 
 /* 1. Main Layout ================================= */
@@ -33,12 +33,18 @@ html{
 	
 }
 body {
+	min-width:350px;
 	background: $gridRed;
 	background-image: url("/dist/img/circle_g.png");
 	background-repeat: no-repeat;
 	background-size: 150%;
 	background-position-x:-55%; 
 	background-position-y:-15%; 
+
+	@media#{$tablet}{
+		background-size: 95%;
+		background-position-x:600%; 
+	}
 	
 }
 
@@ -65,12 +71,20 @@ section#nav-top{
 section#hero{
 	position: relative;
 	min-height: 100vh;
+	max-width:475px;
+	margin: 0 auto;
+	@media#{$tablet}{
+		max-width: none;
+	}
+	
 	#hero-wrapper{
 		position: absolute;
 		top:0;
 		bottom:0;
 		left:0;
 		right:0;
+		width:95%;
+		margin:0 auto;
 	
 		.hero-title{
 			position: absolute;
@@ -81,15 +95,28 @@ section#hero{
 			p{
 				width: 85%;
 			}
+
+			.jmp_2{
+				display: none;
+			}
+
+			@media#{$desktop}{
+				width:60%;
+				top:25%;
+				.jmp_2{
+					display: block;
+				}
+			}
 		}
 
 		.hero-desc{
 			margin-top:5%;
 			width: 100%;
+			margin:0 auto;
 
 			.hero-desc-wrapper{
-			
-				width:100%;
+				width:85%;
+				margin:0 auto;
 				display: flex;
 				flex-direction: row;
 
@@ -102,26 +129,25 @@ section#hero{
 					.hero-text{
 						position: relative;
 						width:164%;
-						left:25%;
 						border-top: 2px solid white;
 						padding:2%;
 					}
 				}
 		
 				.hero-desc-img{
-					width:70%;
+					width:66%;
 					
 					img.hero-img{
 						width: 100%;
 						position: relative;
-						right:8px;
+						right:-40px;
 					}
 				}
 			}
 
 		}
 
-		#jump-buttons{
+		.jump-buttons{
 			display: flex;
 			flex-direction: row;
 			justify-content: space-evenly;
@@ -147,11 +173,61 @@ section#hero{
 			}
 		}
 
+
+		@media#{$tablet}{
+			.hero-desc{
+				.hero-desc-wrapper{
+					width: 75%;
+					flex-direction: row;
+					.hero-desc-text{
+						width: 25%;
+						.hero-text{
+							width:100%;
+							top:-5%;
+							left:25%;
+						}
+					}
+					.hero-desc-img{
+						width:37%;
+						img.hero-img{
+							width: 100%;
+						}
+					}
+				
+				}
+
+			}
+			
+		}
+
+		@media#{$desktop}{
+			
+			.hero-title{
+				width:50%;
+			}
+
+			.hero-desc{
+				.hero-desc-wrapper{
+					flex-direction: row-reverse;
+
+					.hero-desc-img{
+						width:45%;
+					}
+				}
+
+				.jmp_1{
+					display:none;
+				}
+
+			}
+		}
 	}
+
+
 }
 
 section#parralax{
-	margin-top:5%;
+	margin-top:25%;
 	width:100%;
 	height: auto;
 
@@ -165,14 +241,13 @@ section#parralax{
 
 		.wrap_product{
 			display: flex;
-			flex-direction: row;
+			flex-direction: column;
 			width:100%;
-			//background-color: yellow;
 			margin-top:20px;
 	
 			.product_imgs{
-				width:40%;
-				//border:2px solid goldenrod;
+				width:70%;
+				//align-self: flex-start;
 				position: relative;
 				
 				.prod-img{
@@ -213,7 +288,7 @@ section#parralax{
 			}
 	
 			.product_text{
-				width:55%;
+				width:80%;
 				display: flex;
 				flex-direction: column;
 				justify-content: center;
@@ -221,6 +296,7 @@ section#parralax{
 				.text{
 					width: 100%;
 					margin:5%;
+					padding:5%;
 					
 				}
 
@@ -234,14 +310,179 @@ section#parralax{
 					font-size: 1.9em;
 				}
 
-				.prod_desc{
-					//color:white;
-				}
+				// .prod_desc{
+				// 	color:white;
+				// }
 	
 		
 			}
 		}
 	}
+	
+	@media#{$tablet}{
+		.para-wrapper{
+			.wrap_product{
+				display: flex;
+				flex-direction: row;
 
+				.product_imgs{
+					width: 40%;
+				}
+
+				.product_text{
+					width: 50%;
+				}
+			}
+		}
+	}
 
 }
+
+
+
+///ABOUT PAGE
+
+.sectionTitle{
+	width:90%;
+	
+	h1{
+		font-size:3.2em;
+	}
+}
+section#aboutUs{
+	width: 95%;
+	margin: 0% auto;
+
+	.talkingPoints{
+		width:90%;
+		max-width: 500px;
+		margin:0 auto;
+		height: 100vh;
+	
+		.Point{
+			width:100%;
+			display: flex;
+			flex-direction: column;
+			margin-bottom:5%;
+			
+	
+			.tp_number{
+				width:30%;
+				border-bottom: 2px solid white;
+				h1{
+					font-size:3em;
+				}
+			}
+		
+			.tp_text{
+				width:100%;
+				margin-top:4%;
+				
+			}
+		}
+	
+	}
+}
+
+section#diagram{
+	width: 95%;
+	height: 100vh;
+	margin:0 auto;
+	background-image: url("/dist/img/circle_b.png");
+	background-repeat: no-repeat;
+	background-size: 73%;
+	background-position: center;
+	position: relative;
+	.diagramWrapper{
+		position:absolute;
+		top:35%;
+		width:100%;
+		@media#{$tablet}{
+			top:20%;
+		}
+		.wrapStraws{
+			display:flex;
+			flex-direction: row;
+			width:90%;
+			margin:0 auto;
+			.straw{
+				width:25%;
+				position: relative;
+				.strawHover{
+					display:block;
+					width:75px;
+					height:75px;
+					background-color:rgb(132, 100, 138);
+					border-radius:50%;
+					position: absolute;
+					
+					@media#{$tablet}{
+						display:none;
+					}
+
+					.hoverTxt{
+						font-size:70%;
+						text-align: center;
+						color:white;
+						position: relative;
+						top:45%;
+					}
+				}
+				.strawHover:nth-of-type(odd){
+					bottom:-35%;
+				}
+
+				.strawImg{	
+					width:100%;
+					transform:rotate(-25deg);
+				}
+
+			}
+
+
+			@media#{$tablet}{
+
+				.straw_one:hover{
+					position: relative;
+					.strawHover{
+						display: block;
+						position: absolute;
+						left:-15%;
+					}
+				}
+	
+				.straw_two:hover{
+					position: relative;
+					.strawHover{
+						display: block;
+						position: absolute;
+						top:-15%;
+					}
+				}
+	
+				.straw_three:hover{
+					position: relative;
+					.strawHover{
+						display: block;
+						position: absolute;
+						top:-15%;
+					}
+				}
+	
+				.straw_four:hover{
+					position: relative;
+					.strawHover{
+						display: block;
+						position: absolute;
+						right:-15%;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
