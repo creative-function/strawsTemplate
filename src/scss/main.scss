@@ -97,13 +97,40 @@ section#nav-top{
 
 	ul{
 
-		display:none;
+		display:block;
 		flex-direction: row;
 		justify-content: flex-end;
 
 		li{
 			margin-left:10px;
 			padding:5px;
+		}
+	}
+
+	.back-nav{
+		width:100%;
+		background-color: purple;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		margin:0% auto;
+		padding:2%;
+		color:$gridWhite;
+
+		.back-button{
+			width:30%;
+			padding:1%;
+		}
+
+		.nav-cta{
+			width:60%;
+			//background-color: yellow;
+			border-top: 2px solid white;
+			padding-top:1%;
+			font-size:.9em;
+			@media#{$tablet}{
+				width:26%;
+			}
 		}
 	}
 }
@@ -381,21 +408,27 @@ section#parralax{
 
 .sectionTitle{
 	width:90%;
-	
+	color:$gridWhite;
 	h1{
-		font-size:3.2em;
+		font-size:3em;
+		margin-bottom:2%;
 	}
 }
 section#aboutUs{
 	width: 95%;
 	margin: 0% auto;
-
-	.talkingPoints{
-		width:90%;
-		max-width: 500px;
-		margin:0 auto;
-		height: 100vh;
+	height: 100vh;
 	
+	.talkingPoints{
+		width:80%;
+		max-width: 500px;
+		margin:2%;
+		padding:2%;
+		//margin:0 auto;
+		display: flex;
+		flex-direction: column;
+		
+		
 		.Point{
 			width:100%;
 			display: flex;
@@ -408,12 +441,14 @@ section#aboutUs{
 				border-bottom: 2px solid white;
 				h1{
 					font-size:3em;
+					color:$gridWhite;
 				}
 			}
 		
 			.tp_text{
 				width:100%;
 				margin-top:4%;
+				color:$gridWhite;
 				
 			}
 		}
@@ -433,18 +468,29 @@ section#diagram{
 	.diagramWrapper{
 		position:absolute;
 		top:35%;
-		width:90%;
+		width:100%;
+		
+		margin: 0 auto;
 		@media#{$tablet}{
-			top:20%;
+			width:100%;
+			top:25%;
+		}
+		@media#{$desktop}{
+			width:100%;
+			//top:20%;
 		}
 		.wrapStraws{
 			display:flex;
 			flex-direction: row;
-			width:75%;
+			width:60%;
+			max-width: 400px;
 			margin:0 auto;
+			@media#{$tablet}{
+				width:100%;
+			}
 			
 			.straw{
-				width:15%;
+				width:20%;
 				margin: 0 auto;
 				position: relative;
 				
@@ -490,24 +536,42 @@ section#diagram{
 
 					.hvrImg{
 						position: relative;
-						
+					
 					}
 					.hvr_1{
 						top:50px;
 						left:-50px;
+						@media#{$tablet}{
+							width:120%;
+							top:60px;
+							left:-40px;
+						}
+						
 					}
 					.hvr_2{
 						top:-90px;
-						left:-40px;
+						left:-25px;
+						@media#{$tablet}{
+							width:90%;
+							left:-30px;
+						}
 					}
 					.hvr_3{
 						top:-115px;
-						left:-10px;
+						@media#{$tablet}{
+							top:-140px;
+							left:2px;
+							width:90%;
+						}
 					}
 					.hvr_4{
-
 						top:90px;
-						right:-20px;
+						right:-30px;
+						@media#{$tablet}{
+							width:150%;
+							top:100px;
+							right:-40px;
+						}
 					}
 				}
 
@@ -519,18 +583,31 @@ section#diagram{
 
 				.img_1{
 					width:auto;
+					@media#{$tablet}{
+						max-width:100%;
+					}
 				}
 
 				.img_2{
-					width:26.5%;
+					max-width:26.5%;
+					
+					@media#{$tablet}{
+						max-width:19%;
+					}
 				}
 
 				.img_3{
-					width:57%;
+					max-width:57%;
+					@media#{$tablet}{
+						max-width:40%;
+					}
 				}
 
 				.img_4{
-					width:43.5%;
+					max-width:43.5%;
+					@media#{$tablet}{
+						max-width:30%;
+					}
 				}
 			}
 
@@ -542,7 +619,7 @@ section#diagram{
 					.strawHover{
 						display: block;
 						position: absolute;
-						left:-15%;
+					//	left:-15%;
 					}
 				}
 	
@@ -551,7 +628,7 @@ section#diagram{
 					.strawHover{
 						display: block;
 						position: absolute;
-						top:-15%;
+						//top:-15%;
 					}
 				}
 	
@@ -560,7 +637,7 @@ section#diagram{
 					.strawHover{
 						display: block;
 						position: absolute;
-						top:-15%;
+						//top:-15%;
 					}
 				}
 	
@@ -569,7 +646,7 @@ section#diagram{
 					.strawHover{
 						display: block;
 						position: absolute;
-						right:-15%;
+						//right:-15%;
 					}
 				}
 			}
