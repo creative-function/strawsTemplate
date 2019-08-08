@@ -291,7 +291,7 @@ section#hero{
 
 }
 
-section#parralax{
+section#parallax{
 	margin-top:15%;
 	width:100%;
 	height: auto;
@@ -307,7 +307,10 @@ section#parralax{
 		height: 100vh;
 		overflow-x: hidden;
 		overflow-y: auto;
-		perspective: 2px;
+		perspective: 3px;
+		@media#{$tablet}{
+			perspective: 6px;
+		}
 
 		.portion{
 			position: relative;
@@ -351,6 +354,9 @@ section#parralax{
 			flex-direction: column;
 			width:100%;
 			margin-top:20px;
+			@media#{$desktop}{
+				margin-top:45%;
+			}
 	
 			.product_imgs{
 				width:70%;
