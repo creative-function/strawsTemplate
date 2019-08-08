@@ -30,13 +30,18 @@ TABLE OF CONTENTS:
 
 body {
 	background: $gridRed;
+
 }
 
 /* 2. Content ================================= */
 
+
+
 section#nav-section{
 	width: 100%;
 	border-bottom: 3px white solid;
+    font-family: $parsine;
+
 	.nav-menu{
 
 		display: flex;
@@ -63,7 +68,7 @@ section#nav-section{
 
 			@media#{$desktop}{
 				img{
-					width: 35%;
+					width: 100%;
 				}
 			}
 			
@@ -75,7 +80,7 @@ section#nav-section{
 				color:white;
 				text-decoration: none;
 				display: flex;
-				font-family: $fontOpen;
+				font-family: parisine-plus-std-gris, sans-serif;
 				justify-content: center;
 				
 				a{
@@ -94,18 +99,26 @@ section#nav-section{
 
 
 section#titleCap{
+
 	
 	.page-title{
-
 		margin: 0 auto;
 		width: 80%;
 		text-align: center;
 		
 		h1{
-			font-family:$fontNun;
+			font-family: parisine-plus-std-gris, sans-serif;
 			font-size: 3em;
 			color: $gridWhite;
 			margin: 5%;
+			font-weight: 700;
+		}
+
+		button{
+		background: #ED4040;
+		width: 80px;
+		color: #fff;
+		padding: 15px;
 		}
 
 		.snippet{
@@ -127,7 +140,8 @@ section#titleCap{
 
 section#portfolio.layout.layout-portfolio{
     padding: 20px 0;
-   
+
+
 
     .container{
         width:95%;
@@ -146,7 +160,8 @@ section#portfolio.layout.layout-portfolio{
         display: flex;
 		flex-direction: column;
 		justify-content: center;
-		
+		font-family: parisine-plus-std-gris, sans-serif;
+
 		.product-card{
 			background-color:transparent;
 			width:100%;
