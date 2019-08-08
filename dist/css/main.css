@@ -556,7 +556,7 @@ section#nav-top h1 {
 }
 
 section#nav-top .hamburger-menu {
-	width: 15%;
+	width: 115px;
 	height: 50px;
 	position: absolute;
 	top: 25%;
@@ -577,7 +577,7 @@ section#nav-top .hamburger-menu h2 {
 }
 
 section#nav-top .hamburger-menu .menu_bttn {
-	width: 28%;
+	width: 34px;
 	height: 37px;
 	display: -webkit-box;
 	display: flex;
