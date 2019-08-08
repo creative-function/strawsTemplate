@@ -143,11 +143,7 @@ section#hero{
 	margin: 0 auto;
 	@media#{$tablet}{
 		max-width: none;
-		min-height: 35vh;
-	}
-	@media#{$desktop}{
-		max-width: none;
-		min-height: 50vh;
+		min-height: 100vh;
 	}
 	
 	
@@ -161,8 +157,7 @@ section#hero{
 		margin:0 auto;
 	
 		.hero-title{
-			position: absolute;
-			padding:5%;
+		
 			h1{
 				font-size: 2.8em;
 			}
@@ -214,7 +209,7 @@ section#hero{
 					img.hero-img{
 						width: 100%;
 						position: relative;
-						right:-40px;
+						right:-10px;
 					}
 				}
 			}
@@ -291,8 +286,13 @@ section#hero{
 
 }
 
+#hero::after{
+	content:"";
+
+}
+
 section#parralax{
-	margin-top:25%;
+	margin-top:15%;
 	width:100%;
 	height: auto;
 
@@ -303,6 +303,48 @@ section#parralax{
 		//background-color: purple;
 		display: flex;
 		flex-direction: column;
+
+		height: 100vh;
+		overflow-x: hidden;
+		overflow-y: auto;
+		perspective: 2px;
+
+		.portion{
+			position: relative;
+			height: 100vh;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			
+		}
+	
+		.bg1::after{
+			background-image:url("/dist/img/circle_p.png");
+		}
+
+		.bg2::after{
+			background-image:url("/dist/img/circle_y.png");
+		}
+
+		.bg3::after{
+			background-image:url("/dist/img/circle_b.png");
+		}
+	
+	
+		.parallax::after{
+			content:"";
+			position: absolute;
+			top:0;
+			right:0;
+			bottom:0;
+			left:0;
+			transform: translateZ(-1px) scale(1.5);
+			background-size:200%;
+			background-position-x: 100%;
+			background-repeat: no-repeat;
+			z-index:-1;
+		}
+
 
 		.wrap_product{
 			display: flex;
@@ -339,17 +381,17 @@ section#parralax{
 					}
 				}
 
-				.prod-img_1{
-					background-image: url("/dist/img/circle_p.png");
-				}
+				// .prod-img_1{
+				// 	background-image: url("/dist/img/circle_p.png");
+				// }
 
-				.prod-img_2{
-					background-image: url("/dist/img/circle_y.png");
-				}
+				// .prod-img_2{
+				// 	background-image: url("/dist/img/circle_y.png");
+				// }
 
-				.prod-img_3{
-					background-image: url("/dist/img/circle_b.png");
-				}
+				// .prod-img_3{
+				// 	background-image: url("/dist/img/circle_b.png");
+				// }
 			}
 	
 			.product_text{
