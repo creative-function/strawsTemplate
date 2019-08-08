@@ -138,16 +138,16 @@ section#nav-top{
 
 section#hero{
 	position: relative;
-	min-height: 100vh;
-	max-width:475px;
+	min-height: 80vh;
+	max-width:90%;
 	margin: 0 auto;
 	@media#{$tablet}{
 		max-width: none;
-		min-height: 50vh;
+		min-height: 35vh;
 	}
 	@media#{$desktop}{
 		max-width: none;
-		min-height: 100vh;
+		min-height: 50vh;
 	}
 	
 	
@@ -229,7 +229,8 @@ section#hero{
 			width: 100%;
 			button{
 				width:30%;
-				padding:2%;
+				padding:1%;
+				margin:1%;
 				color:white;
 				background-color: $gridRed;
 				border: 2px solid white;
@@ -361,6 +362,9 @@ section#parralax{
 					width: 100%;
 					margin:5%;
 					padding:5%;
+					@media#{$desktop}{
+						width:75%;
+					}
 					
 				}
 
@@ -396,6 +400,20 @@ section#parralax{
 				.product_text{
 					width: 50%;
 				}
+			}
+		}
+	}
+
+	@media#{$desktop}{
+		.para-wrapper{
+			.wrap_product{
+				display: flex;
+				flex-direction: row;
+
+				.product_imgs{
+					width: 50%;
+				}
+
 			}
 		}
 	}
