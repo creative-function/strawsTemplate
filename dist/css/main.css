@@ -551,9 +551,52 @@ section#nav-top {
 	z-index: 999;
 }
 
-section#nav-top ul {
+section#nav-top h1 {
+	font-size: 3em;
+}
+
+section#nav-top .hamburger-menu {
+	width: 15%;
+	height: 50px;
+	position: absolute;
+	top: 25%;
+	right: 2%;
 	display: -webkit-box;
 	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	        flex-direction: row;
+	-webkit-box-pack: space-evenly;
+	        justify-content: space-evenly;
+}
+
+section#nav-top .hamburger-menu h2 {
+	font-size: 1.2em;
+	color: white;
+	align-self: center;
+}
+
+section#nav-top .hamburger-menu .menu_bttn {
+	width: 28%;
+	height: 37px;
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	        flex-direction: row;
+	flex-wrap: wrap;
+	-webkit-box-pack: justify;
+	        justify-content: space-between;
+}
+
+section#nav-top .hamburger-menu .menu_bttn .bttn_circ {
+	width: 15px;
+	height: 15px;
+	background-color: white;
+}
+
+section#nav-top ul {
+	display: none;
 	-webkit-box-orient: horizontal;
 	-webkit-box-direction: normal;
 	        flex-direction: row;
@@ -576,6 +619,14 @@ section#hero {
 @media (min-width: 767px) {
 	section#hero {
 		max-width: none;
+		min-height: 50vh;
+	}
+}
+
+@media (min-width: 900px) {
+	section#hero {
+		max-width: none;
+		min-height: 100vh;
 	}
 }
 
@@ -678,16 +729,6 @@ section#hero #hero-wrapper .jump-buttons button {
 	color: white;
 	background-color: #ED4040;
 	border: 2px solid white;
-}
-
-section#hero #hero-wrapper .jump-buttons .hamburger-menu {
-	display: none;
-	float: right;
-	margin: 20px;
-}
-
-section#hero #hero-wrapper .jump-buttons .hamburger-menu h2 {
-	color: white;
 }
 
 @media (min-width: 767px) {
@@ -891,7 +932,7 @@ section#diagram {
 	margin: 0 auto;
 	background-image: url("/dist/img/circle_b.png");
 	background-repeat: no-repeat;
-	background-size: 73%;
+	background-size: contain;
 	background-position: center;
 	position: relative;
 }
@@ -899,7 +940,7 @@ section#diagram {
 section#diagram .diagramWrapper {
 	position: absolute;
 	top: 35%;
-	width: 100%;
+	width: 90%;
 }
 
 @media (min-width: 767px) {
@@ -914,12 +955,13 @@ section#diagram .diagramWrapper .wrapStraws {
 	-webkit-box-orient: horizontal;
 	-webkit-box-direction: normal;
 	        flex-direction: row;
-	width: 90%;
+	width: 75%;
 	margin: 0 auto;
 }
 
 section#diagram .diagramWrapper .wrapStraws .straw {
-	width: 25%;
+	width: 15%;
+	margin: 0 auto;
 	position: relative;
 }
 
@@ -927,8 +969,6 @@ section#diagram .diagramWrapper .wrapStraws .straw .strawHover {
 	display: block;
 	width: 75px;
 	height: 75px;
-	background-color: #84648a;
-	border-radius: 50%;
 	position: absolute;
 }
 
@@ -943,18 +983,73 @@ section#diagram .diagramWrapper .wrapStraws .straw .strawHover .hoverTxt {
 	text-align: center;
 	color: white;
 	position: relative;
-	top: 45%;
+	z-index: 999;
 }
 
-section#diagram .diagramWrapper .wrapStraws .straw .strawHover:nth-of-type(odd) {
-	bottom: -35%;
+section#diagram .diagramWrapper .wrapStraws .straw .strawHover .txt_1 {
+	top: 112px;
+	left: -60px;
+}
+
+section#diagram .diagramWrapper .wrapStraws .straw .strawHover .txt_2 {
+	top: -55px;
+	right: 50px;
+}
+
+section#diagram .diagramWrapper .wrapStraws .straw .strawHover .txt_3 {
+	top: -80px;
+	right: 20px;
+}
+
+section#diagram .diagramWrapper .wrapStraws .straw .strawHover .txt_4 {
+	bottom: -140px;
+	left: 50px;
+}
+
+section#diagram .diagramWrapper .wrapStraws .straw .strawHover .hvrImg {
+	position: relative;
+}
+
+section#diagram .diagramWrapper .wrapStraws .straw .strawHover .hvr_1 {
+	top: 50px;
+	left: -50px;
+}
+
+section#diagram .diagramWrapper .wrapStraws .straw .strawHover .hvr_2 {
+	top: -90px;
+	left: -40px;
+}
+
+section#diagram .diagramWrapper .wrapStraws .straw .strawHover .hvr_3 {
+	top: -115px;
+	left: -10px;
+}
+
+section#diagram .diagramWrapper .wrapStraws .straw .strawHover .hvr_4 {
+	top: 90px;
+	right: -20px;
 }
 
 section#diagram .diagramWrapper .wrapStraws .straw .strawImg {
-	width: 100%;
-	-webkit-transform: rotate(-25deg);
-	    -ms-transform: rotate(-25deg);
-	        transform: rotate(-25deg);
+	display: block;
+	margin: 0 auto;
+	width: auto;
+}
+
+section#diagram .diagramWrapper .wrapStraws .straw .img_1 {
+	width: auto;
+}
+
+section#diagram .diagramWrapper .wrapStraws .straw .img_2 {
+	width: 26.5%;
+}
+
+section#diagram .diagramWrapper .wrapStraws .straw .img_3 {
+	width: 57%;
+}
+
+section#diagram .diagramWrapper .wrapStraws .straw .img_4 {
+	width: 43.5%;
 }
 
 @media (min-width: 767px) {

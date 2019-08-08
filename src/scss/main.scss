@@ -55,8 +55,49 @@ body {
 section#nav-top{
 	position: relative;
 	z-index: 999;
+
+	h1{
+		font-size: 3em;
+	}
+
+	.hamburger-menu{
+		width:15%;
+		height: 50px;
+		//background-color: yellow;
+		position: absolute;
+		top:25%;
+		right:2%;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-evenly;
+
+		h2{
+			font-size: 1.2em;
+			color:white;
+			align-self: center;	
+		}
+
+		.menu_bttn{
+			width: 28%;
+			height: 37px;
+			display:flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: space-between;
+	
+			.bttn_circ{
+				width:15px;
+				height: 15px;
+				background-color: white;
+
+			}
+		}
+
+	} 
+
 	ul{
-		display:flex;
+
+		display:none;
 		flex-direction: row;
 		justify-content: flex-end;
 
@@ -75,7 +116,13 @@ section#hero{
 	margin: 0 auto;
 	@media#{$tablet}{
 		max-width: none;
+		min-height: 50vh;
 	}
+	@media#{$desktop}{
+		max-width: none;
+		min-height: 100vh;
+	}
+	
 	
 	#hero-wrapper{
 		position: absolute;
@@ -161,16 +208,6 @@ section#hero{
 				border: 2px solid white;
 			}
 
-			.hamburger-menu{
-				display: none;
-				float:right;
-				margin:20px;
-
-				h2{
-					color:white;
-				}
-
-			}
 		}
 
 
@@ -390,32 +427,34 @@ section#diagram{
 	margin:0 auto;
 	background-image: url("/dist/img/circle_b.png");
 	background-repeat: no-repeat;
-	background-size: 73%;
+	background-size: contain;
 	background-position: center;
 	position: relative;
 	.diagramWrapper{
 		position:absolute;
 		top:35%;
-		width:100%;
+		width:90%;
 		@media#{$tablet}{
 			top:20%;
 		}
 		.wrapStraws{
 			display:flex;
 			flex-direction: row;
-			width:90%;
+			width:75%;
 			margin:0 auto;
+			
 			.straw{
-				width:25%;
+				width:15%;
+				margin: 0 auto;
 				position: relative;
+				
 				.strawHover{
 					display:block;
 					width:75px;
 					height:75px;
-					background-color:rgb(132, 100, 138);
-					border-radius:50%;
+					//background-color: rgba(255, 255, 0,.5);
 					position: absolute;
-					
+
 					@media#{$tablet}{
 						display:none;
 					}
@@ -425,18 +464,74 @@ section#diagram{
 						text-align: center;
 						color:white;
 						position: relative;
-						top:45%;
+						z-index: 999;
+					}
+
+					.txt_1{
+						top:112px;
+						left:-60px;
+					}
+
+					.txt_2{
+						top:-55px;
+						right:50px;
+					}
+
+
+					.txt_3{
+						top:-80px;
+						right:20px;
+					}
+
+					.txt_4{
+						bottom:-140px;
+						left:50px;
+					}
+
+					.hvrImg{
+						position: relative;
+						
+					}
+					.hvr_1{
+						top:50px;
+						left:-50px;
+					}
+					.hvr_2{
+						top:-90px;
+						left:-40px;
+					}
+					.hvr_3{
+						top:-115px;
+						left:-10px;
+					}
+					.hvr_4{
+
+						top:90px;
+						right:-20px;
 					}
 				}
-				.strawHover:nth-of-type(odd){
-					bottom:-35%;
+
+				.strawImg{
+					display: block;
+					margin: 0 auto;
+					width: auto;	
 				}
 
-				.strawImg{	
-					width:100%;
-					transform:rotate(-25deg);
+				.img_1{
+					width:auto;
 				}
 
+				.img_2{
+					width:26.5%;
+				}
+
+				.img_3{
+					width:57%;
+				}
+
+				.img_4{
+					width:43.5%;
+				}
 			}
 
 
