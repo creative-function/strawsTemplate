@@ -149,6 +149,7 @@ body {
 section#nav-section {
 	width: 100%;
 	border-bottom: 3px white solid;
+	font-family: parisine-plus-std-gris, sans-serif;
 }
 
 section#nav-section .nav-menu {
@@ -189,7 +190,7 @@ section#nav-section .nav-menu .nav-logo img {
 
 @media (min-width: 900px) {
 	section#nav-section .nav-menu .nav-logo img {
-		width: 35%;
+		width: 100%;
 	}
 }
 
@@ -202,7 +203,7 @@ section#nav-section .nav-menu nav ul {
 	text-decoration: none;
 	display: -webkit-box;
 	display: flex;
-	font-family: "Open Sans", sans-serif;
+	font-family: parisine-plus-std-gris, sans-serif;
 	-webkit-box-pack: center;
 	        justify-content: center;
 }
@@ -211,6 +212,7 @@ section#nav-section .nav-menu nav ul a {
 	padding: 5px;
 	margin: 10px;
 	text-decoration: none;
+	color: #fff;
 }
 
 section#nav-section .nav-menu nav ul a:visited {
@@ -225,10 +227,18 @@ section#titleCap .page-title {
 }
 
 section#titleCap .page-title h1 {
-	font-family: "Nunito Sans", sans-serif;
+	font-family: parisine-plus-std-gris, sans-serif;
 	font-size: 3em;
 	color: #FFFFFF;
 	margin: 5%;
+	font-weight: 700;
+}
+
+section#titleCap .page-title button {
+	background: #ED4040;
+	width: 80px;
+	color: #fff;
+	padding: 15px;
 }
 
 section#titleCap .page-title .snippet {
@@ -270,6 +280,7 @@ section#portfolio.layout.layout-portfolio .portfolio-grid {
 	        flex-direction: column;
 	-webkit-box-pack: center;
 	        justify-content: center;
+	font-family: parisine-plus-std-gris, sans-serif;
 }
 
 section#portfolio.layout.layout-portfolio .portfolio-grid .product-card {
@@ -305,13 +316,13 @@ section#portfolio.layout.layout-portfolio .portfolio-grid .product-card .product
 section#portfolio.layout.layout-portfolio .portfolio-grid .product-card .product-card-inner .product-card-front {
 	background-image: url("/dist/img/straws.jpg");
 	background-size: cover;
-	border-radius: 50%;
+	border-radius: 40%;
 }
 
 section#portfolio.layout.layout-portfolio .portfolio-grid .product-card .product-card-inner .product-card-back {
 	background-color: goldenrod;
 	color: purple;
-	border-radius: 50%;
+	border-radius: 40%;
 	-webkit-transform: rotateY(180deg);
 	        transform: rotateY(180deg);
 }
@@ -519,6 +530,32 @@ pages for .scss pages
 	}
 }
 
+nav {
+	padding: 20px;
+}
+
+nav ul {
+	color: white;
+	text-decoration: none;
+	display: -webkit-box;
+	display: flex;
+	font-family: parisine-plus-std-gris, sans-serif;
+	-webkit-box-pack: center;
+	        justify-content: center;
+}
+
+nav ul a {
+	padding: 5px;
+	margin: 10px;
+	text-decoration: none;
+	color: #fff;
+}
+
+nav ul a:visited {
+	text-decoration: none;
+	color: #FFFFFF;
+}
+
 /* 1. Main Layout ================================= */
 * {
 	box-sizing: border-box;
@@ -546,6 +583,12 @@ body {
 }
 
 /* 2. Content ================================= */
+p {
+	font-family: parisine-plus-std-gris, sans-serif;
+	font-weight: 400;
+	color: #fff;
+}
+
 section#nav-top {
 	position: relative;
 	z-index: 999;
@@ -553,10 +596,17 @@ section#nav-top {
 
 section#nav-top h1 {
 	font-size: 3em;
+	font-family: parisine-plus-std-gris, sans-serif;
+	font-weight: 700;
+}
+
+section#nav-top img {
+	height: 50px;
+	top: 25%;
 }
 
 section#nav-top .hamburger-menu {
-	width: 115px;
+	width: 15%;
 	height: 50px;
 	position: absolute;
 	top: 25%;
@@ -568,6 +618,17 @@ section#nav-top .hamburger-menu {
 	        flex-direction: row;
 	-webkit-box-pack: space-evenly;
 	        justify-content: space-evenly;
+	font-family: parisine-plus-std-gris, sans-serif;
+}
+
+section#nav-top .hamburger-menu a {
+	text-decoration: none;
+	color: #fff;
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	        flex-direction: row;
 }
 
 section#nav-top .hamburger-menu h2 {
@@ -576,8 +637,8 @@ section#nav-top .hamburger-menu h2 {
 	align-self: center;
 }
 
-section#nav-top .hamburger-menu .menu_bttn {
-	width: 34px;
+section#nav-top .hamburger-menu .menuToggle {
+	width: 28%;
 	height: 37px;
 	display: -webkit-box;
 	display: flex;
@@ -589,14 +650,15 @@ section#nav-top .hamburger-menu .menu_bttn {
 	        justify-content: space-between;
 }
 
-section#nav-top .hamburger-menu .menu_bttn .bttn_circ {
+section#nav-top .hamburger-menu .menuToggle .bttn_circ {
 	width: 15px;
 	height: 15px;
 	background-color: white;
 }
 
 section#nav-top ul {
-	display: block;
+	display: -webkit-box;
+	display: flex;
 	-webkit-box-orient: horizontal;
 	-webkit-box-direction: normal;
 	        flex-direction: row;
@@ -609,9 +671,51 @@ section#nav-top ul li {
 	padding: 5px;
 }
 
+section#nav-top #menu {
+	position: absolute;
+	width: 50vw;
+	height: 80vh;
+	margin: -100px 0 0 -50px;
+	padding: 50px;
+	padding-top: 125px;
+	background: #FDC249;
+	border-radius: 50%;
+	right: -160px;
+	list-style-type: none;
+	display: none;
+	-webkit-transform-origin: 0% 0%;
+	    -ms-transform-origin: 0% 0%;
+	        transform-origin: 0% 0%;
+	-webkit-transform: translate(100%, 0);
+	    -ms-transform: translate(100%, 0);
+	        transform: translate(100%, 0);
+	-webkit-transition: -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+	transition: -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+	transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+	transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+
+section#nav-top #menu li {
+	padding: 10px 0;
+	font-size: 22px;
+	background: #902AED;
+	margin: 10px;
+	width: 40%;
+	text-align: center;
+	color: #FDC249;
+}
+
+section#nav-top #menuToggle input:checked ~ ul {
+	-webkit-transform: none;
+	    -ms-transform: none;
+	        transform: none;
+	display: block;
+	-webkit-animation: move 1s ease-out;
+	        animation: move 1s ease-out;
+}
+
 section#nav-top .back-nav {
 	width: 100%;
-	background-color: purple;
 	display: -webkit-box;
 	display: flex;
 	-webkit-box-orient: horizontal;
@@ -629,6 +733,10 @@ section#nav-top .back-nav .back-button {
 	padding: 1%;
 }
 
+section#nav-top .back-nav .back-button .bck_bttn p {
+	margin-left: 23px;
+}
+
 section#nav-top .back-nav .nav-cta {
 	width: 60%;
 	border-top: 2px solid white;
@@ -644,12 +752,19 @@ section#nav-top .back-nav .nav-cta {
 
 section#hero {
 	position: relative;
-	min-height: 80vh;
-	max-width: 90%;
+	min-height: 100vh;
+	max-width: 475px;
 	margin: 0 auto;
 }
 
 @media (min-width: 767px) {
+	section#hero {
+		max-width: none;
+		min-height: 50vh;
+	}
+}
+
+@media (min-width: 900px) {
 	section#hero {
 		max-width: none;
 		min-height: 100vh;
@@ -666,8 +781,18 @@ section#hero #hero-wrapper {
 	margin: 0 auto;
 }
 
+section#hero #hero-wrapper .hero-title {
+	position: absolute;
+	padding: 5%;
+}
+
 section#hero #hero-wrapper .hero-title h1 {
-	font-size: 2.8em;
+	font-size: 4.8em;
+	letter-spacing: 5px;
+	font-family: parisine-plus-std-gris, sans-serif;
+	fill: none;
+	color: #fff;
+	font-weight: 400;
 }
 
 section#hero #hero-wrapper .hero-title p {
@@ -729,7 +854,7 @@ section#hero #hero-wrapper .hero-desc .hero-desc-wrapper .hero-desc-img {
 section#hero #hero-wrapper .hero-desc .hero-desc-wrapper .hero-desc-img img.hero-img {
 	width: 100%;
 	position: relative;
-	right: -10px;
+	right: -40px;
 }
 
 section#hero #hero-wrapper .jump-buttons {
@@ -746,11 +871,11 @@ section#hero #hero-wrapper .jump-buttons {
 
 section#hero #hero-wrapper .jump-buttons button {
 	width: 30%;
-	padding: 1%;
-	margin: 1%;
+	padding: 2%;
 	color: white;
 	background-color: #ED4040;
 	border: 2px solid white;
+	font-family: parisine-plus-std-gris, sans-serif;
 }
 
 @media (min-width: 767px) {
@@ -793,17 +918,13 @@ section#hero #hero-wrapper .jump-buttons button {
 	}
 }
 
-#hero::after {
-	content: "";
-}
-
-section#parallax {
-	margin-top: 15%;
+section#parralax {
+	margin-top: 25%;
 	width: 100%;
 	height: auto;
 }
 
-section#parallax .para-wrapper {
+section#parralax .para-wrapper {
 	min-width: 360px;
 	width: 100%;
 	height: auto;
@@ -820,13 +941,13 @@ section#parallax .para-wrapper {
 }
 
 @media (min-width: 767px) {
-	section#parallax .para-wrapper {
+	section#parralax .para-wrapper {
 		-webkit-perspective: 6px;
 		        perspective: 6px;
 	}
 }
 
-section#parallax .para-wrapper .portion {
+section#parralax .para-wrapper .portion {
 	position: relative;
 	height: 100vh;
 	display: -webkit-box;
@@ -837,19 +958,19 @@ section#parallax .para-wrapper .portion {
 	        justify-content: center;
 }
 
-section#parallax .para-wrapper .bg1::after {
+section#parralax .para-wrapper .bg1::after {
 	background-image: url("/dist/img/circle_p.png");
 }
 
-section#parallax .para-wrapper .bg2::after {
+section#parralax .para-wrapper .bg2::after {
 	background-image: url("/dist/img/circle_y.png");
 }
 
-section#parallax .para-wrapper .bg3::after {
+section#parralax .para-wrapper .bg3::after {
 	background-image: url("/dist/img/circle_b.png");
 }
 
-section#parallax .para-wrapper .parallax::after {
+section#parralax .para-wrapper .parallax::after {
 	content: "";
 	position: absolute;
 	top: 0;
@@ -864,7 +985,7 @@ section#parallax .para-wrapper .parallax::after {
 	z-index: -1;
 }
 
-section#parallax .para-wrapper .wrap_product {
+section#parralax .para-wrapper .wrap_product {
 	display: -webkit-box;
 	display: flex;
 	-webkit-box-orient: vertical;
@@ -875,41 +996,53 @@ section#parallax .para-wrapper .wrap_product {
 }
 
 @media (min-width: 900px) {
-	section#parallax .para-wrapper .wrap_product {
+	section#parralax .para-wrapper .wrap_product {
 		margin-top: 45%;
 	}
 }
 
-section#parallax .para-wrapper .wrap_product .product_imgs {
+section#parralax .para-wrapper .wrap_product .product_imgs {
 	width: 70%;
 	position: relative;
 }
 
-section#parallax .para-wrapper .wrap_product .product_imgs .prod-img {
+section#parralax .para-wrapper .wrap_product .product_imgs .prod-img {
 	margin-top: 100px;
 	background-size: cover;
 	background-position-x: 100%;
 }
 
-section#parallax .para-wrapper .wrap_product .product_imgs .prod-img .straw_1 {
+section#parralax .para-wrapper .wrap_product .product_imgs .prod-img .straw_1 {
 	width: 100%;
 	position: relative;
 	top: -50px;
 }
 
-section#parallax .para-wrapper .wrap_product .product_imgs .prod-img .straw_2 {
+section#parralax .para-wrapper .wrap_product .product_imgs .prod-img .straw_2 {
 	width: 100%;
 	position: relative;
 	top: -30px;
 }
 
-section#parallax .para-wrapper .wrap_product .product_imgs .prod-img .straw_3 {
+section#parralax .para-wrapper .wrap_product .product_imgs .prod-img .straw_3 {
 	width: 100%;
 	position: relative;
 	top: -20px;
 }
 
-section#parallax .para-wrapper .wrap_product .product_text {
+section#parralax .para-wrapper .wrap_product .product_imgs .prod-img_1 {
+	background-image: url("/dist/img/circle_p.png");
+}
+
+section#parralax .para-wrapper .wrap_product .product_imgs .prod-img_2 {
+	background-image: url("/dist/img/circle_y.png");
+}
+
+section#parralax .para-wrapper .wrap_product .product_imgs .prod-img_3 {
+	background-image: url("/dist/img/circle_b.png");
+}
+
+section#parralax .para-wrapper .wrap_product .product_text {
 	width: 80%;
 	display: -webkit-box;
 	display: flex;
@@ -920,53 +1053,35 @@ section#parallax .para-wrapper .wrap_product .product_text {
 	        justify-content: center;
 }
 
-section#parallax .para-wrapper .wrap_product .product_text .text {
+section#parralax .para-wrapper .wrap_product .product_text .text {
 	width: 100%;
 	margin: 5%;
 	padding: 5%;
 }
 
-@media (min-width: 900px) {
-	section#parallax .para-wrapper .wrap_product .product_text .text {
-		width: 75%;
-	}
-}
-
-section#parallax .para-wrapper .wrap_product .product_text .prod_title {
+section#parralax .para-wrapper .wrap_product .product_text .prod_title {
 	width: 50%;
 	padding-top: 5%;
 	border-top: 2px solid white;
 }
 
-section#parallax .para-wrapper .wrap_product .product_text .prod_cta {
+section#parralax .para-wrapper .wrap_product .product_text .prod_cta {
 	font-size: 1.9em;
+	font-weight: 700;
 }
 
 @media (min-width: 767px) {
-	section#parallax .para-wrapper .wrap_product {
+	section#parralax .para-wrapper .wrap_product {
 		display: -webkit-box;
 		display: flex;
 		-webkit-box-orient: horizontal;
 		-webkit-box-direction: normal;
 		        flex-direction: row;
 	}
-	section#parallax .para-wrapper .wrap_product .product_imgs {
+	section#parralax .para-wrapper .wrap_product .product_imgs {
 		width: 40%;
 	}
-	section#parallax .para-wrapper .wrap_product .product_text {
-		width: 50%;
-	}
-}
-
-@media (min-width: 900px) {
-	section#parallax .para-wrapper .wrap_product {
-		display: -webkit-box;
-		display: flex;
-		-webkit-box-orient: horizontal;
-		-webkit-box-direction: normal;
-		        flex-direction: row;
-	}
-	section#parallax .para-wrapper .wrap_product .product_imgs {
+	section#parralax .para-wrapper .wrap_product .product_text {
 		width: 50%;
 	}
 }
@@ -974,11 +1089,19 @@ section#parallax .para-wrapper .wrap_product .product_text .prod_cta {
 .sectionTitle {
 	width: 90%;
 	color: #FFFFFF;
+	font-family: parisine-plus-std-gris, sans-serif;
 }
 
 .sectionTitle h1 {
 	font-size: 3em;
-	margin-bottom: 2%;
+	margin-bottom: 10%;
+}
+
+@media (min-width: 767px) {
+	.sectionTitle h1 {
+		text-align: center;
+		width: 100%;
+	}
 }
 
 section#aboutUs {
@@ -999,6 +1122,14 @@ section#aboutUs .talkingPoints {
 	        flex-direction: column;
 }
 
+@media (min-width: 767px) {
+	section#aboutUs .talkingPoints {
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		        flex-direction: row;
+	}
+}
+
 section#aboutUs .talkingPoints .Point {
 	width: 100%;
 	display: -webkit-box;
@@ -1009,6 +1140,12 @@ section#aboutUs .talkingPoints .Point {
 	margin-bottom: 5%;
 }
 
+@media (min-width: 767px) {
+	section#aboutUs .talkingPoints .Point {
+		margin: 3%;
+	}
+}
+
 section#aboutUs .talkingPoints .Point .tp_number {
 	width: 30%;
 	border-bottom: 2px solid white;
@@ -1017,6 +1154,7 @@ section#aboutUs .talkingPoints .Point .tp_number {
 section#aboutUs .talkingPoints .Point .tp_number h1 {
 	font-size: 3em;
 	color: #FFFFFF;
+	font-family: hwt-republic-gothic-outline, sans-serif;
 }
 
 section#aboutUs .talkingPoints .Point .tp_text {
@@ -1249,6 +1387,11 @@ section#diagram .diagramWrapper .wrapStraws .straw .img_4 {
 		display: block;
 		position: absolute;
 	}
+}
+
+footer {
+	background: #FDC249;
+	height: 100px;
 }
 
 /*# sourceMappingURL=main.css.map */

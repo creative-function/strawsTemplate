@@ -87,6 +87,7 @@ section#nav-section{
 					padding:5px;
 					margin:10px;
 					text-decoration: none;
+					color: #fff;
 				}
 				a:visited{
 					text-decoration: none;
@@ -187,13 +188,13 @@ section#portfolio.layout.layout-portfolio{
 				.product-card-front{
 					background-image:url("/dist/img/straws.jpg");
 					background-size:cover;
-					border-radius: 50%;
+					border-radius: 40%;
 				}
 			
 				.product-card-back{
 					background-color: goldenrod;
 					color:purple;
-					border-radius: 50%;
+					border-radius: 40%;
 					transform: rotateY(180deg);
 
 					.prod_name{
