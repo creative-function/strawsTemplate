@@ -212,6 +212,7 @@ section#nav-section .nav-menu nav ul a {
 	padding: 5px;
 	margin: 10px;
 	text-decoration: none;
+	color: #fff;
 }
 
 section#nav-section .nav-menu nav ul a:visited {
@@ -315,13 +316,13 @@ section#portfolio.layout.layout-portfolio .portfolio-grid .product-card .product
 section#portfolio.layout.layout-portfolio .portfolio-grid .product-card .product-card-inner .product-card-front {
 	background-image: url("/dist/img/straws.jpg");
 	background-size: cover;
-	border-radius: 50%;
+	border-radius: 40%;
 }
 
 section#portfolio.layout.layout-portfolio .portfolio-grid .product-card .product-card-inner .product-card-back {
 	background-color: goldenrod;
 	color: purple;
-	border-radius: 50%;
+	border-radius: 40%;
 	-webkit-transform: rotateY(180deg);
 	        transform: rotateY(180deg);
 }
@@ -529,6 +530,32 @@ pages for .scss pages
 	}
 }
 
+nav {
+	padding: 20px;
+}
+
+nav ul {
+	color: white;
+	text-decoration: none;
+	display: -webkit-box;
+	display: flex;
+	font-family: parisine-plus-std-gris, sans-serif;
+	-webkit-box-pack: center;
+	        justify-content: center;
+}
+
+nav ul a {
+	padding: 5px;
+	margin: 10px;
+	text-decoration: none;
+	color: #fff;
+}
+
+nav ul a:visited {
+	text-decoration: none;
+	color: #FFFFFF;
+}
+
 /* 1. Main Layout ================================= */
 * {
 	box-sizing: border-box;
@@ -631,7 +658,8 @@ section#nav-top .hamburger-menu .menuToggle .bttn_circ {
 }
 
 section#nav-top ul {
-	display: block;
+	display: -webkit-box;
+	display: flex;
 	-webkit-box-orient: horizontal;
 	-webkit-box-direction: normal;
 	        flex-direction: row;
@@ -704,6 +732,10 @@ section#nav-top .back-nav {
 section#nav-top .back-nav .back-button {
 	width: 30%;
 	padding: 1%;
+}
+
+section#nav-top .back-nav .back-button .bck_bttn p {
+	margin-left: 23px;
 }
 
 section#nav-top .back-nav .nav-cta {
@@ -1062,7 +1094,14 @@ section#parralax .para-wrapper .wrap_product .product_text .prod_cta {
 
 .sectionTitle h1 {
 	font-size: 3em;
-	margin-bottom: 2%;
+	margin-bottom: 10%;
+}
+
+@media (min-width: 767px) {
+	.sectionTitle h1 {
+		text-align: center;
+		width: 100%;
+	}
 }
 
 section#aboutUs {
@@ -1083,6 +1122,14 @@ section#aboutUs .talkingPoints {
 	        flex-direction: column;
 }
 
+@media (min-width: 767px) {
+	section#aboutUs .talkingPoints {
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		        flex-direction: row;
+	}
+}
+
 section#aboutUs .talkingPoints .Point {
 	width: 100%;
 	display: -webkit-box;
@@ -1091,6 +1138,12 @@ section#aboutUs .talkingPoints .Point {
 	-webkit-box-direction: normal;
 	        flex-direction: column;
 	margin-bottom: 5%;
+}
+
+@media (min-width: 767px) {
+	section#aboutUs .talkingPoints .Point {
+		margin: 3%;
+	}
 }
 
 section#aboutUs .talkingPoints .Point .tp_number {

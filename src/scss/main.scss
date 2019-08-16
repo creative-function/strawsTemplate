@@ -72,7 +72,7 @@ section#nav-top{
 
 	img{
 		height: 50px;
-		margin-left: 20px;
+		// margin-left: 20px;
 		top: 25%;
 	}
 
@@ -123,7 +123,7 @@ section#nav-top{
 
 	ul{
 
-		display:block;
+		display:flex;
 		flex-direction: row;
 		justify-content: flex-end;
 
@@ -183,6 +183,11 @@ section#nav-top{
 		.back-button{
 			width:30%;
 			padding:1%;
+
+			.bck_bttn p{
+				margin-left: 23px;
+
+			}
 		}
 
 		.nav-cta{
@@ -229,7 +234,8 @@ section#hero{
 			h1{
 				font-size: 4.8em;
 				letter-spacing: 5px;
-				font-family: $gothic;
+				font-family: $parsine;
+				fill: none;
 				color: #fff;
 				font-weight: 400;
 			}
@@ -530,7 +536,13 @@ section#parralax{
 
 	h1{
 		font-size:3em;
-		margin-bottom:2%;
+		margin-bottom:10%;
+
+		@media#{$tablet}{
+		    text-align: center;
+		    width: 100%;
+		 }
+
 	}
 }
 section#aboutUs{
@@ -538,7 +550,7 @@ section#aboutUs{
 	margin: 0% auto;
 	height: 100vh;
 	
-	.talkingPoints{
+	.talkingPoints{ 
 		width:80%;
 		max-width: 500px;
 		margin:2%;
@@ -546,13 +558,20 @@ section#aboutUs{
 		//margin:0 auto;
 		display: flex;
 		flex-direction: column;
-		
+		 
+		 @media#{$tablet}{ //take off width and max-width so they sit nicely in a row
+		    flex-direction: row;
+		 }
 		
 		.Point{
 			width:100%;
 			display: flex;
 			flex-direction: column;
 			margin-bottom:5%;
+
+			@media#{$tablet}{
+		    margin: 3%;
+		 }
 			
 	
 			.tp_number{
