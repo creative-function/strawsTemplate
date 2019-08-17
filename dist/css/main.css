@@ -682,6 +682,7 @@ section#hero {
 	position: relative;
 	width: 100%;
 	height: 100vh;
+	min-height: 100vh;
 	max-width: 475px;
 	margin: 0 auto;
 }
@@ -699,7 +700,7 @@ section#hero {
 }
 
 section#hero .hero-desc-section {
-	width: 90%;
+	width: 95%;
 	margin: 0 auto;
 	display: -webkit-box;
 	display: flex;
@@ -751,6 +752,7 @@ section#hero .hero-desc-section .hero-title .jmp_2 {
 }
 
 section#hero .hero-desc-section .hero-cta {
+	width: 100%;
 	display: -webkit-box;
 	display: flex;
 	-webkit-box-orient: vertical;
@@ -799,6 +801,13 @@ section#hero .hero-desc-section .hero-cta .hero-section_top .hero-desc-img {
 
 section#hero .hero-desc-section .hero-cta .hero-section_top .hero-desc-img img.hero-img {
 	width: 100%;
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	        flex-flow: row nowrap;
+	-webkit-box-align: center;
+	        align-items: center;
 }
 
 @media (min-width: 767px) {
@@ -867,13 +876,13 @@ section#hero .hero-desc-section .jump-buttons button {
 	}
 }
 
-section#parralax {
+section#parallax {
 	margin-top: 25%;
 	width: 100%;
 	height: auto;
 }
 
-section#parralax .para-wrapper {
+section#parallax .para-wrapper {
 	min-width: 360px;
 	width: 100%;
 	height: auto;
@@ -890,108 +899,44 @@ section#parralax .para-wrapper {
 }
 
 @media (min-width: 767px) {
-	section#parralax .para-wrapper {
+	section#parallax .para-wrapper {
 		-webkit-perspective: 6px;
 		        perspective: 6px;
 	}
 }
 
-section#parralax .para-wrapper .portion {
-	position: relative;
-	height: 100vh;
-	display: -webkit-box;
-	display: flex;
-	-webkit-box-align: center;
-	        align-items: center;
-	-webkit-box-pack: center;
-	        justify-content: center;
-}
-
-section#parralax .para-wrapper .bg1::after {
-	background-image: url("/dist/img/circle_p.png");
-}
-
-section#parralax .para-wrapper .bg2::after {
-	background-image: url("/dist/img/circle_y.png");
-}
-
-section#parralax .para-wrapper .bg3::after {
-	background-image: url("/dist/img/circle_b.png");
-}
-
-section#parralax .para-wrapper .parallax::after {
-	content: "";
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	-webkit-transform: translateZ(-1px) scale(1.5);
-	        transform: translateZ(-1px) scale(1.5);
-	background-size: 200%;
-	background-position-x: 100%;
-	background-repeat: no-repeat;
-	z-index: -1;
-}
-
-section#parralax .para-wrapper .wrap_product {
-	display: -webkit-box;
-	display: flex;
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
-	        flex-direction: column;
+section#parallax .para-wrapper .wrap_product {
 	width: 100%;
-	margin-top: 20px;
+	position: relative;
 }
 
 @media (min-width: 900px) {
-	section#parralax .para-wrapper .wrap_product {
+	section#parallax .para-wrapper .wrap_product {
 		margin-top: 45%;
 	}
 }
 
-section#parralax .para-wrapper .wrap_product .product_imgs {
-	width: 70%;
+section#parallax .para-wrapper .wrap_product .product_imgs {
+	width: 75%;
 	position: relative;
 }
 
-section#parralax .para-wrapper .wrap_product .product_imgs .prod-img {
-	margin-top: 100px;
-	background-size: cover;
-	background-position-x: 100%;
-}
-
-section#parralax .para-wrapper .wrap_product .product_imgs .prod-img .straw_1 {
+section#parallax .para-wrapper .wrap_product .product_imgs .prod-img .straw_1 {
 	width: 100%;
 	position: relative;
-	top: -50px;
 }
 
-section#parralax .para-wrapper .wrap_product .product_imgs .prod-img .straw_2 {
+section#parallax .para-wrapper .wrap_product .product_imgs .prod-img .straw_2 {
 	width: 100%;
 	position: relative;
-	top: -30px;
 }
 
-section#parralax .para-wrapper .wrap_product .product_imgs .prod-img .straw_3 {
+section#parallax .para-wrapper .wrap_product .product_imgs .prod-img .straw_3 {
 	width: 100%;
 	position: relative;
-	top: -20px;
 }
 
-section#parralax .para-wrapper .wrap_product .product_imgs .prod-img_1 {
-	background-image: url("/dist/img/circle_p.png");
-}
-
-section#parralax .para-wrapper .wrap_product .product_imgs .prod-img_2 {
-	background-image: url("/dist/img/circle_y.png");
-}
-
-section#parralax .para-wrapper .wrap_product .product_imgs .prod-img_3 {
-	background-image: url("/dist/img/circle_b.png");
-}
-
-section#parralax .para-wrapper .wrap_product .product_text {
+section#parallax .para-wrapper .wrap_product .product_text {
 	width: 80%;
 	display: -webkit-box;
 	display: flex;
@@ -1002,35 +947,61 @@ section#parralax .para-wrapper .wrap_product .product_text {
 	        justify-content: center;
 }
 
-section#parralax .para-wrapper .wrap_product .product_text .text {
+section#parallax .para-wrapper .wrap_product .product_text .text {
 	width: 100%;
 	margin: 5%;
 	padding: 5%;
 }
 
-section#parralax .para-wrapper .wrap_product .product_text .prod_title {
+section#parallax .para-wrapper .wrap_product .product_text .prod_title {
 	width: 50%;
 	padding-top: 5%;
 	border-top: 2px solid white;
 }
 
-section#parralax .para-wrapper .wrap_product .product_text .prod_cta {
+section#parallax .para-wrapper .wrap_product .product_text .prod_cta {
 	font-size: 1.9em;
 	font-weight: 700;
 }
 
+section#parallax .para-wrapper .wrap_product .bg1::after {
+	background-image: url("/dist/img/circle_p.png");
+}
+
+section#parallax .para-wrapper .wrap_product .bg2::after {
+	background-image: url("/dist/img/circle_y.png");
+}
+
+section#parallax .para-wrapper .wrap_product .bg3::after {
+	background-image: url("/dist/img/circle_b.png");
+}
+
+section#parallax .para-wrapper .parallax::after {
+	content: " ";
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-attachment: fixed;
+	background-size: 85%;
+	background-position-x: -100%;
+	background-repeat: no-repeat;
+	z-index: -1;
+}
+
 @media (min-width: 767px) {
-	section#parralax .para-wrapper .wrap_product {
+	section#parallax .para-wrapper .wrap_product {
 		display: -webkit-box;
 		display: flex;
 		-webkit-box-orient: horizontal;
 		-webkit-box-direction: normal;
 		        flex-direction: row;
 	}
-	section#parralax .para-wrapper .wrap_product .product_imgs {
+	section#parallax .para-wrapper .wrap_product .product_imgs {
 		width: 40%;
 	}
-	section#parralax .para-wrapper .wrap_product .product_text {
+	section#parallax .para-wrapper .wrap_product .product_text {
 		width: 50%;
 	}
 }
