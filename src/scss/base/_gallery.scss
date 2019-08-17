@@ -40,7 +40,7 @@ body {
 section#nav-section{
 	width: 100%;
 	border-bottom: 3px white solid;
-    font-family: $parsine;
+    @include mainText();
 
 	.nav-menu{
 
@@ -80,8 +80,8 @@ section#nav-section{
 				color:white;
 				text-decoration: none;
 				display: flex;
-				font-family: parisine-plus-std-gris, sans-serif;
 				justify-content: center;
+				@include mainText();
 				
 				a{
 					padding:5px;
@@ -108,11 +108,10 @@ section#titleCap{
 		text-align: center;
 		
 		h1{
-			font-family: parisine-plus-std-gris, sans-serif;
+			@include outlineText();
 			font-size: 3em;
-			color: $gridWhite;
 			margin: 5%;
-			font-weight: 700;
+		
 		}
 
 		button{
@@ -123,7 +122,7 @@ section#titleCap{
 		}
 
 		.snippet{
-			font-family:$fontOpen;
+			@include mainText();
 			font-size: 1.15em;
 			line-height: 1.5em;
 			color: $gridWhite;
@@ -161,7 +160,7 @@ section#portfolio.layout.layout-portfolio{
         display: flex;
 		flex-direction: column;
 		justify-content: center;
-		font-family: parisine-plus-std-gris, sans-serif;
+		@include mainText();
 
 		.product-card{
 			background-color:transparent;
