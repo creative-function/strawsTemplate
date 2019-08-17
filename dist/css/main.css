@@ -684,6 +684,7 @@ section#hero {
 	height: 100vh;
 	max-width: 475px;
 	margin: 0 auto;
+	margin-bottom: 20%;
 }
 
 @media (min-width: 767px) {
@@ -939,8 +940,6 @@ section#parallax .para-wrapper {
 	-webkit-box-direction: normal;
 	        flex-direction: column;
 	height: 100vh;
-	overflow-x: hidden;
-	overflow-y: auto;
 	-webkit-perspective: 3px;
 	        perspective: 3px;
 }
@@ -957,9 +956,13 @@ section#parallax .para-wrapper .wrap_product {
 	position: relative;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 767px) {
 	section#parallax .para-wrapper .wrap_product {
-		margin-top: 45%;
+		display: -webkit-box;
+		display: flex;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		        flex-direction: row;
 	}
 }
 
@@ -968,17 +971,13 @@ section#parallax .para-wrapper .wrap_product .product_imgs {
 	position: relative;
 }
 
-section#parallax .para-wrapper .wrap_product .product_imgs .prod-img .straw_1 {
-	width: 100%;
-	position: relative;
+@media (min-width: 767px) {
+	section#parallax .para-wrapper .wrap_product .product_imgs {
+		width: 50%;
+	}
 }
 
-section#parallax .para-wrapper .wrap_product .product_imgs .prod-img .straw_2 {
-	width: 100%;
-	position: relative;
-}
-
-section#parallax .para-wrapper .wrap_product .product_imgs .prod-img .straw_3 {
+section#parallax .para-wrapper .wrap_product .product_imgs .prod-img {
 	width: 100%;
 	position: relative;
 }
@@ -992,6 +991,12 @@ section#parallax .para-wrapper .wrap_product .product_text {
 	        flex-direction: column;
 	-webkit-box-pack: center;
 	        justify-content: center;
+}
+
+@media (min-width: 767px) {
+	section#parallax .para-wrapper .wrap_product .product_text {
+		width: 40%;
+	}
 }
 
 section#parallax .para-wrapper .wrap_product .product_text .text {
@@ -1037,19 +1042,10 @@ section#parallax .para-wrapper .parallax::after {
 	z-index: -1;
 }
 
-@media (min-width: 767px) {
-	section#parallax .para-wrapper .wrap_product {
-		display: -webkit-box;
-		display: flex;
-		-webkit-box-orient: horizontal;
-		-webkit-box-direction: normal;
-		        flex-direction: row;
-	}
-	section#parallax .para-wrapper .wrap_product .product_imgs {
-		width: 40%;
-	}
-	section#parallax .para-wrapper .wrap_product .product_text {
-		width: 50%;
+@media (min-width: 900px) {
+	section#parallax .para-wrapper .parallax::after {
+		background-size: 45%;
+		background-position-x: -20%;
 	}
 }
 
@@ -1362,11 +1358,6 @@ section#diagram .diagramWrapper .wrapStraws .straw .img_4 {
 		display: block;
 		position: absolute;
 	}
-}
-
-footer {
-	background: #FDC249;
-	height: 100px;
 }
 
 /*# sourceMappingURL=main.css.map */

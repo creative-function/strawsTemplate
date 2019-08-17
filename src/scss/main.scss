@@ -198,6 +198,7 @@ section#hero{
 	height: 100vh;
 	max-width:475px;
 	margin: 0 auto;
+	margin-bottom: 20%;
 	@media#{$tablet}{
 		max-width: 90%;
 		//min-height: 100vh;
@@ -376,8 +377,8 @@ section#parallax{
 		flex-direction: column;
 
 		height: 100vh;
-		overflow-x: hidden;
-		overflow-y: auto;
+		//overflow-x: hidden;
+		//overflow-y: auto;
 		perspective: 3px;
 		@media#{$tablet}{
 			perspective: 6px;
@@ -385,52 +386,24 @@ section#parallax{
 
 		.wrap_product{
 			width:100%;
-			//margin-top:20px;
 			position: relative;
-			//height: 100vh;
-			
 
-			@media#{$desktop}{
-				margin-top:45%;
+			@media#{$tablet}{
+				display: flex;
+				flex-direction: row;
 			}
-	
 			.product_imgs{
 				width:75%;
-				//align-self: flex-start;
 				position: relative;
+				@media#{$tablet}{
+					width: 50%;
+				}
 				
 				.prod-img{
-				
-					.straw_1{
-						width:100%;
-						position: relative;
-						
-					}
+					width:100%;
+					position: relative;
 	
-					.straw_2{
-						width:100%;
-						position: relative;
-						
-					}
-	
-					.straw_3{
-						width:100%;
-						position: relative;
-						
-					}
 				}
-
-				// .prod-img_1{
-				// 	background-image: url("/dist/img/circle_p.png");
-				// }
-
-				// .prod-img_2{
-				// 	background-image: url("/dist/img/circle_y.png");
-				// }
-
-				// .prod-img_3{
-				// 	background-image: url("/dist/img/circle_b.png");
-				// }
 			}
 	
 			.product_text{
@@ -438,6 +411,10 @@ section#parallax{
 				display: flex;
 				flex-direction: column;
 				justify-content: center;
+
+				@media#{$tablet}{
+					width: 40%;
+				}
 				.text{
 					width: 100%;
 					margin:5%;
@@ -455,12 +432,6 @@ section#parallax{
 					font-size: 1.9em;
 					font-weight: 700;
 				}
-
-				// .prod_desc{
-				// 	color:white;
-				// }
-	
-		
 			}
 		
 		}
@@ -489,25 +460,13 @@ section#parallax{
 			background-position-x: -100%;
 			background-repeat: no-repeat;
 			z-index:-1;
-		}
 
-	}
-	
-	@media#{$tablet}{
-		.para-wrapper{
-			.wrap_product{
-				display: flex;
-				flex-direction: row;
-
-				.product_imgs{
-					width: 40%;
-				}
-
-				.product_text{
-					width: 50%;
-				}
+			@media#{$desktop}{
+				background-size:45%;
+			background-position-x: -20%;
 			}
 		}
+
 	}
 
 }
@@ -781,9 +740,5 @@ section#diagram{
 }
 
 
-footer{
-	background: #FDC249;
-	height: 100px;
-}
 
 
