@@ -700,7 +700,7 @@ section#hero {
 }
 
 section#hero .hero-desc-section {
-	width: 90%;
+	width: 95%;
 	margin: 0 auto;
 	display: -webkit-box;
 	display: flex;
@@ -711,16 +711,18 @@ section#hero .hero-desc-section {
 
 @media (min-width: 900px) {
 	section#hero .hero-desc-section {
+		width: 98%;
 		-webkit-box-orient: horizontal;
 		-webkit-box-direction: normal;
 		        flex-direction: row;
-		max-width: 790px;
+		max-width: 900px;
 	}
 }
 
 @media (min-width: 900px) {
 	section#hero .hero-desc-section .hero-title {
 		width: 100%;
+		max-width: 400px;
 		align-self: center;
 	}
 }
@@ -731,24 +733,18 @@ section#hero .hero-desc-section .hero-title h1 {
 	color: transparent;
 	-webkit-text-stroke-width: 1px;
 	-webkit-text-stroke-color: white;
-	font-size: 4em;
+	font-size: 4.5em;
 }
 
 @media (min-width: 767px) {
 	section#hero .hero-desc-section .hero-title h1 {
-		font-size: 6em;
-	}
-}
-
-@media (min-width: 900px) {
-	section#hero .hero-desc-section .hero-title h1 {
-		font-size: 5em;
+		font-size: 5.4em;
 	}
 }
 
 section#hero .hero-desc-section .hero-title p {
 	line-height: 1.3em;
-	width: 85%;
+	width: 75%;
 }
 
 @media (min-width: 767px) {
