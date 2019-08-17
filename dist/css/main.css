@@ -760,6 +760,12 @@ section#hero .hero-desc-section .hero-cta {
 	        flex-direction: column;
 }
 
+@media (min-width: 767px) {
+	section#hero .hero-desc-section .hero-cta {
+		position: absolute;
+	}
+}
+
 section#hero .hero-desc-section .hero-cta .hero-section_top {
 	width: 100%;
 	display: -webkit-box;
@@ -767,6 +773,13 @@ section#hero .hero-desc-section .hero-cta .hero-section_top {
 	-webkit-box-orient: horizontal;
 	-webkit-box-direction: normal;
 	        flex-direction: row;
+}
+
+@media (min-width: 767px) {
+	section#hero .hero-desc-section .hero-cta .hero-section_top {
+		-webkit-box-pack: space-evenly;
+		        justify-content: space-evenly;
+	}
 }
 
 section#hero .hero-desc-section .hero-cta .hero-section_top .hero-desc-text {
@@ -782,7 +795,7 @@ section#hero .hero-desc-section .hero-cta .hero-section_top .hero-desc-text {
 
 @media (min-width: 767px) {
 	section#hero .hero-desc-section .hero-cta .hero-section_top .hero-desc-text {
-		width: 33%;
+		width: 25%;
 	}
 }
 
@@ -799,6 +812,12 @@ section#hero .hero-desc-section .hero-cta .hero-section_top .hero-desc-img {
 	right: 50px;
 }
 
+@media (min-width: 767px) {
+	section#hero .hero-desc-section .hero-cta .hero-section_top .hero-desc-img {
+		width: 35%;
+	}
+}
+
 section#hero .hero-desc-section .hero-cta .hero-section_top .hero-desc-img img.hero-img {
 	width: 100%;
 	display: -webkit-box;
@@ -808,12 +827,6 @@ section#hero .hero-desc-section .hero-cta .hero-section_top .hero-desc-img img.h
 	        flex-flow: row nowrap;
 	-webkit-box-align: center;
 	        align-items: center;
-}
-
-@media (min-width: 767px) {
-	section#hero .hero-desc-section .hero-cta .hero-section_top .hero-desc-img img.hero-img {
-		width: 100%;
-	}
 }
 
 section#hero .hero-desc-section .jump-buttons {
