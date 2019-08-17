@@ -209,13 +209,20 @@ section#hero{
 	}
 
 	.hero-desc-section{
-		width:95%;
+		width:90%;
 		margin:0 auto;
 		display: flex;
 		flex-direction: column;
+		@media#{$desktop}{
+			flex-direction: row;
+			max-width: 790px;
+		}
 
 		.hero-title{
-			
+			@media#{$desktop}{
+				width:100%;
+				align-self: center;
+			}
 			h1{
 				@include outlineText();
 				font-size: 4em;
@@ -223,26 +230,39 @@ section#hero{
 				@media#{$tablet}{
 					font-size: 6em;
 				}
+				@media#{$desktop}{
+					font-size: 5em;
+				}
 			}
 			p{
-				margin-top:2%;
 				line-height: 1.3em;
-				font-size: 1em;
 				width: 85%;
 				@media#{$tablet}{
 					width:55%;
+				}
+				@media#{$desktop}{
+					width:90%;
+					font-size:.78em;
 				}
 			}
 	
 			.jmp_2{
 				display: none;
-			}
-	
-			@media#{$desktop}{
-				width:60%;
-				top:25%;
-				.jmp_2{
-					display: block;
+				@media#{$desktop}{
+					display:flex;
+					justify-content: space-between;
+					width:92%;
+					
+
+					button{
+						width:100px;
+						height: 30px;
+						padding:1%;
+						color:white;
+						background-color: transparent;
+						border: 2px solid white;
+
+					}
 				}
 			}
 		}
@@ -253,13 +273,23 @@ section#hero{
 
 			@media#{$tablet}{
 				position: absolute;
+				right:0;
+			}
+			@media#{$desktop}{
+				position: relative;
+				.jmp_1{
+					display:none;
+				}
 			}
 			.hero-section_top{
 				width:100%;
 				display: flex;
 				flex-direction: row;
 				@media#{$tablet}{
-					justify-content: space-evenly;
+					justify-content: center;
+				}
+				@media#{$desktop}{
+					flex-direction: row-reverse;
 				}
 				.hero-desc-text{
 					width: 50%;
@@ -268,6 +298,9 @@ section#hero{
 					justify-content: center;
 					@media#{$tablet}{
 						width:25%;
+					}
+					@media#{$desktop}{
+						width:50%;
 					}
 
 					.hero-text{
@@ -286,7 +319,12 @@ section#hero{
 
 					@media#{$tablet}{
 						width:35%;
-					
+						right:0px;
+					}
+
+
+					@media#{$desktop}{
+						width:100%;
 					}
 					img.hero-img{
 						width: 100%;
@@ -306,65 +344,23 @@ section#hero{
 			justify-content: space-evenly;
 			margin-top:10px;
 			width: 100%;
+
+			@media#{$tablet}{
+				justify-content: space-around;
+
+			}
 			button{
 				width:30%;
-				padding:2%;
+				padding:1%;
 				color:white;
-				background-color: $gridRed;
+				background-color: transparent;
 				border: 2px solid white;
 				
-			}
-
-		}
-
-
-		@media#{$tablet}{
-			.hero-desc{
-				.hero-desc-wrapper{
-					width: 75%;
-					flex-direction: row;
-					.hero-desc-text{
-						width: 25%;
-						.hero-text{
-							width:100%;
-							top:-5%;
-							left:25%;
-						}
-					}
-					.hero-desc-img{
-						width:37%;
-						img.hero-img{
-							width: 100%;
-						}
-					}
-				
+				@media#{$tablet}{
+					width:15%;
 				}
-
-			}
-			
-		}
-
-		@media#{$desktop}{
-			
-			.hero-title{
-				width:50%;
 			}
 
-			.hero-desc{
-				.hero-desc-wrapper{
-					flex-direction: row-reverse;
-
-					.hero-desc-img{
-						width:45%;
-					}
-				}
-
-				.jmp_1{
-					display:none;
-				}
-
-			}
-	
 		}
 	}
 	
