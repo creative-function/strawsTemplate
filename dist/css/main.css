@@ -580,7 +580,7 @@ body {
 	background: #ED4040;
 	background-image: url("/dist/img/circle_g.png");
 	background-repeat: no-repeat;
-	background-size: 150%;
+	background-size: 80%;
 	background-position-x: -55%;
 	background-position-y: -15%;
 	font-family: parisine-plus-std-gris, sans-serif;
@@ -789,11 +789,11 @@ section#hero .hero-desc-section .hero-cta {
 	-webkit-box-orient: vertical;
 	-webkit-box-direction: normal;
 	        flex-direction: column;
+	position: absolute;
 }
 
 @media (min-width: 767px) {
 	section#hero .hero-desc-section .hero-cta {
-		position: absolute;
 		right: 0;
 	}
 }

@@ -40,7 +40,7 @@ body {
 	background: $gridRed;
 	background-image: url("/dist/img/circle_g.png");
 	background-repeat: no-repeat;
-	background-size: 150%;
+	background-size: 80%;
 	background-position-x:-55%; 
 	background-position-y:-15%; 
 	@include mainText();
@@ -268,9 +268,9 @@ section#hero{
 			width: 100%;
 			display: flex;
 			flex-direction: column;
+			position: absolute;
 
 			@media#{$tablet}{
-				position: absolute;
 				right:0;
 			}
 			@media#{$desktop}{
