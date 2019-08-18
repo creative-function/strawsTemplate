@@ -1,26 +1,27 @@
-console.log(`Hello World from main.js! 
+
+
+console.log(`Hello chello, straws! 
 Change this message, and make sure it changes in the browser 
 to verify that you're working in the right files.`)
 
+// let strawOne = document.querySelector(".straw_1");
+// let $strawTwo = document.querySelector(".straw_2");
+// let $strawThree = document.querySelector(".straw_3");
 
-// let photoBox = document.querySelectorAll(".single-project");
+let $strawImgs = document.querySelectorAll(".prod-img");
 
-// let photoGallery = [
-//    'url("/dist/img/dog1.jpg")',
-//    'url("/dist/img/dog2.jpg")',
-//    'url("/dist/img/dog3.jpg")',
-//    'url("/dist/img/dog4.jpg")',
-//    'url("/dist/img/dog5.jpg")',
-//    'url("/dist/img/dog6.jpg")',
-//    'url("/dist/img/dog7.jpg")',
-//    'url("/dist/img/dog8.jpg")',
-//    'url("/dist/img/dog9.jpg")',
-//    'url("/dist/img/dog10.jpg")',
-//    'url("/dist/img/dog11.jpg")',
-//    'url("/dist/img/dog12.jpg")'
-// ]
+let heroImg = document.querySelector(".hero-img");
 
-// $('.single-project').css({
-//     "background-image" : photoGallery[0],
-//     "background-size" : "contain"
-// });
+// TweenMax.fromTo(strawOne, 1,{x:-10,y:100, scale:.5},{x:0,y:0, scale:1});
+// TweenMax.fromTo($strawTwo, 1,{x:-10,y:100, scale:.5},{x:0,y:0, scale:1});
+// TweenMax.fromTo($strawThree, 1,{x:-10,y:100, scale:.5},{x:0,y:0, scale:1});
+
+
+TweenMax.fromTo($strawImgs, 1, {x:-10,y:100, scale:.5},{x:0,y:0, scale:1, onComplete:tl});
+
+var tl= new TimelineMax({repeat:-1, repeatDelay:2,ease:Power1.easeInOut})
+tl.to($strawImgs, 2, {y:0})  
+.to($strawImgs, 2, {y:25})  
+.to($strawImgs,2, {y:0})  
+.to($strawImgs, 2, {y:25})
+.to($strawImgs, 2, {y:0})

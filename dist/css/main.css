@@ -983,8 +983,12 @@ section#parallax .para-wrapper .wrap_product .product_imgs .prod-img {
 	position: relative;
 }
 
+section#parallax .para-wrapper .wrap_product .product_imgs .prod-img img {
+	width: 100%;
+}
+
 section#parallax .para-wrapper .wrap_product .product_text {
-	width: 80%;
+	width: 100%;
 	display: -webkit-box;
 	display: flex;
 	-webkit-box-orient: vertical;
@@ -996,25 +1000,30 @@ section#parallax .para-wrapper .wrap_product .product_text {
 
 @media (min-width: 767px) {
 	section#parallax .para-wrapper .wrap_product .product_text {
-		width: 40%;
+		width: 50%;
 	}
 }
 
 section#parallax .para-wrapper .wrap_product .product_text .text {
-	width: 100%;
-	margin: 5%;
-	padding: 5%;
+	width: 92%;
+	margin: 1%;
+	padding: 3%;
 }
 
 section#parallax .para-wrapper .wrap_product .product_text .prod_title {
-	width: 50%;
+	font-size: 1.5em;
+	width: 51%;
 	padding-top: 5%;
 	border-top: 2px solid white;
 }
 
 section#parallax .para-wrapper .wrap_product .product_text .prod_cta {
-	font-size: 1.9em;
+	font-size: 4em;
 	font-weight: 700;
+}
+
+section#parallax .para-wrapper .wrap_product .product_text .prod_desc {
+	max-width: 340px;
 }
 
 section#parallax .para-wrapper .bg1::after {
@@ -1037,8 +1046,9 @@ section#parallax .para-wrapper .parallax::after {
 	bottom: 0;
 	left: 0;
 	background-attachment: fixed;
-	background-size: 90%;
-	background-position-x: -20%;
+	background-size: 80%;
+	background-position: center;
+	background-position-y: 100%;
 	background-repeat: no-repeat;
 	z-index: -1;
 }

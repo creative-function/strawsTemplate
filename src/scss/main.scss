@@ -403,35 +403,43 @@ section#parallax{
 				.prod-img{
 					width:100%;
 					position: relative;
+
+					img{
+						width:100%;
+					}
 	
 				}
 			}
 	
 			.product_text{
-				width:80%;
+				width:100%;
 				display: flex;
 				flex-direction: column;
 				justify-content: center;
 
 				@media#{$tablet}{
-					width: 40%;
+					width: 50%;
 				}
 				.text{
-					width: 100%;
-					margin:5%;
-					padding:5%;
+					width: 92%;
+					margin:1%;
+					padding:3%;
 					
 				}
 
 				.prod_title{
-					width:50%;
+					font-size: 1.5em;
+					width:51%;
 					padding-top:5%;
 					border-top:2px solid white;
 				}
 
 				.prod_cta{
-					font-size: 1.9em;
+					font-size: 4em;
 					font-weight: 700;
+				}
+				.prod_desc{
+					max-width: 340px;
 				}
 			}
 		
@@ -457,8 +465,9 @@ section#parallax{
 			left:0;
 			//transform: translateZ(-1px) scale(1.5);
 			background-attachment: fixed;
-			background-size:90%;
-			background-position-x: -20%;
+			background-size:80%;
+			background-position:center;
+			background-position-y:100%;
 			background-repeat: no-repeat;
 			z-index:-1;
 
