@@ -85,11 +85,15 @@
                     <div class="product_imgs">
 
                         <div class="circ-img circ-img_1 ">
-                            <img class="circle_1" src="dist/img/circle_p.svg">
-                            <img class="blob_1" src="dist/img/blob_p.svg">
+                            <svg id="circle_purple" class="circleSVGs" xmlns="http://www.w3.org/2000/svg" width="749" height="749" viewBox="0 0 749 749">
+                                <circle id="circ_p" data-name="Ellipse 21" cx="374.5" cy="374.5" r="374.5" fill="#902aed"/>
+                                <path id="blob_p" class="allBlobImgs" data-name="Path 94" d="M374.5,0C581.331,0,890.908,168.866,549.908,401.373s-102.2,420.615-309.031,420.615S0,581.331,0,374.5,167.669,0,374.5,0Z" fill="#902aed"/>
+                                <path id="blob_p2" class="allBlobImgs" d="M327.6,822c-206.8,0-516.4-168.9-175.4-401.4S254.4,0,461.2,0c206.8,0,240.9,240.7,240.9,447.5
+	                            S534.4,822,327.6,822z"/>
+                            </svg>     
                         </div>
 
-                        <div class="prod-img prod-img_1 ">
+                        <div class="straw-img straw-img_1 ">
                             <img class="straw_1" src="dist/img/straws2.png">
                         </div>
 
@@ -110,9 +114,20 @@
                 </div>
                 <div class="wrap_product parallax bg2">
                     <div class="product_imgs">
-                        <div class="prod-img prod-img_2">
-                            <img class="straw_2" src="dist/img/metalStraw.png">
+            
+                        <div class="circ-img circ-img_2 ">
+                            <svg id="circle_yellow" class="circleSVGs" xmlns="http://www.w3.org/2000/svg" width="749" height="749" viewBox="0 0 749 749">
+                                <circle id="circ_y" data-name="Ellipse 24" cx="374.5" cy="374.5" r="374.5" fill="#fdc249"/>
+                                <path id="blob_y" class="allBlobImgs" data-name="Path 93" d="M266.648,204.821C368.639,11.368,749,167.669,749,374.5S690.092,708.162,366.227,849.781,0,581.331,0,374.5,164.658,398.274,266.648,204.821Z" transform="translate(0 -116.746)" fill="#fdc249"/>
+                                <path id="blob_y2" class="allBlobImgs" d="M327.6,822c-206.8,0-516.4-168.9-175.4-401.4S254.4,0,461.2,0c206.8,0,240.9,240.7,240.9,447.5 
+                                S534.4,822,327.6,822z"/>
+                            </svg>     
                         </div>
+
+                        <div class="straw-img straw-img_2 ">
+                            <img class="straw_1" src="dist/img/metalStraw.png">
+                        </div>
+                        
                     </div>
                     <div class="product_text">
                         <p class="text prod_title">
@@ -130,9 +145,18 @@
             
                     <div class="product_imgs">
 
-                        <div class="prod-img prod-img_3">
-                            <img class="straw_3" src="dist/img/bambooStraw.png">
-                        </div>
+                    <div class="circ-img circ-img_3 ">
+                        <svg id="circle_blue" class="circleSVGs" xmlns="http://www.w3.org/2000/svg" width="749" height="749" viewBox="0 0 749 749">
+                            <circle id="circ_b" data-name="Ellipse 25" cx="374.5" cy="374.5" r="374.5" fill="#74bce2"/>
+                            <path id="blob_b"  class="allBlobImgs" data-name="Path 92" d="M528.018-56.13C734.848-56.13,749,167.669,749,374.5S439.533,457.363,270.357,673.437,0,581.331,0,374.5,321.187-56.13,528.018-56.13Z" transform="translate(0 56.13)" fill="#74bce2"/>
+                            <path id="blob_b2" class="allBlobImgs" d="M327.6,822c-206.8,0-516.4-168.9-175.4-401.4S254.4,0,461.2,0c206.8,0,240.9,240.7,240.9,447.5
+                            S534.4,822,327.6,822z"/>
+                        </svg>     
+                     </div>
+
+                    <div class="straw-img straw-img_3">
+                        <img class="straw_3" src="dist/img/bambooStraw.png">
+                    </div>
                     </div>
                     <div class="product_text">
                         <p class="text prod_title">
@@ -149,7 +173,9 @@
             </div> 
         </section> 
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+        <script src="dist/js/uncompressed/plugins/MorphSVGPlugin.js"></script>
+        <script src="dist/js/uncompressed/TweenLite.js"></script>
+        <script src="dist/js/uncompressed/TweenMax.js"></script>
 		<script src="dist/js/main.js"></script>
 	</body>
 </html>

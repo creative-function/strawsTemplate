@@ -4,17 +4,41 @@ console.log("Hello chello, straws! \nChange this message, and make sure it chang
 // let $strawTwo = document.querySelector(".straw_2");
 // let $strawThree = document.querySelector(".straw_3");
 
-var $strawImgs = document.querySelectorAll(".prod-img");
-var heroImg = document.querySelector(".hero-img"); // TweenMax.fromTo(strawOne, 1,{x:-10,y:100, scale:.5},{x:0,y:0, scale:1});
-// TweenMax.fromTo($strawTwo, 1,{x:-10,y:100, scale:.5},{x:0,y:0, scale:1});
-// TweenMax.fromTo($strawThree, 1,{x:-10,y:100, scale:.5},{x:0,y:0, scale:1});
+var $strawImgs = document.querySelectorAll(".straw-img");
+var blob = new TimelineMax({
+  repeat: -1,
+  yoyo: true,
+  ease: Power2.easeInOut
+});
+MorphSVGPlugin.convertToPath("#circ_p"); //purple circle animation
 
+blob.to("#circ_p", 8, {
+  morphSVG: "#blob_p"
+}, "spill -=.1");
+blob.to("#circ_p", 8, {
+  morphSVG: "#blob_p2"
+}, "spill -=-2"); //yellow circle animation
+
+MorphSVGPlugin.convertToPath("#circ_y");
+blob.to("#circ_y", 8, {
+  morphSVG: "#blob_y"
+}, "spill -=.1");
+blob.to("#circ_y", 8, {
+  morphSVG: "#blob_y2"
+}, "spill -=-2"); //blue circle animation
+
+MorphSVGPlugin.convertToPath("#circ_b");
+blob.to("#circ_b", 8, {
+  morphSVG: "#blob_b"
+}, "spill -=.1");
+blob.to("#circ_b", 8, {
+  morphSVG: "#blob_b2"
+}, "spill -=-2");
 var tl = new TimelineMax({
   repeat: -1,
-  repeatDelay: 2,
   ease: Power1.easeInOut
 });
-tl.fromTo($strawImgs, .5, {
+tl.fromTo($strawImgs, .2, {
   scale: 0
 }, {
   scale: 1
@@ -38,5 +62,13 @@ tl.fromTo($strawImgs, .5, {
   y: 0
 }).to($strawImgs, .5, {
   scale: 0
-});
+}, "slideOut").fromTo($strawImgs, .5, {
+  y: 0
+}, {
+  y: 1000
+}, "slideOut").fromTo($strawImgs, .5, {
+  x: 0
+}, {
+  x: -1000
+}, "slideOut");
 //# sourceMappingURL=main.js.map

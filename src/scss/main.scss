@@ -38,16 +38,21 @@ body {
 
 	min-width:350px;
 	background: $gridRed;
-	background-image: url("/dist/img/circle_g.png");
+	background-image: url("/dist/img/circle_g.svg");
 	background-repeat: no-repeat;
-	background-size: 80%;
-	background-position-x:-55%; 
+	background-size: 90%;
+	background-position-x:300%; 
 	background-position-y:-15%; 
 	@include mainText();
 
 	@media#{$tablet}{
-		background-size: 95%;
-		background-position-x:600%; 
+		background-size: 85%;
+		background-position-y:-40%; 
+	}
+
+	@media#{$desktop}{
+		background-size: 85%;
+		background-position-x:225%;
 	}
 
 }
@@ -388,6 +393,7 @@ section#parallax{
 			width:100%;
 			position: relative;
 			padding:5%;
+			margin-top:5%;
 
 			@media#{$tablet}{
 				display: flex;
@@ -400,24 +406,42 @@ section#parallax{
 					width: 50%;
 				}
 				
-				.prod-img{
+				.straw-img{
 					width:100%;
 					position: relative;
+					top:0;
+					left:0;
+					height: auto;	
+					z-index: 99;
 
 					img{
 						width:100%;
 					}
+					@media#{$tablet}{
+						width: 80%;
+					}
 				}
 
-				.circ-img{
-					width:100%;
-					position: relative;
-					
-					img{
-						position: absolute;
-						top:70%;
+				.circ-img{		
+					 position: relative;
+					height: auto;					
+					.circleSVGs{
 						width:120%;
+						position: absolute;
+						top:-145px;
+						left:0px;
+						@media#{$tablet}{
+							width:100%;
+							left:-100px;
+						}
+	
 					}
+					
+
+					.allBlobImgs{
+					visibility: hidden;
+					}
+
 				}
 
 			}
@@ -429,6 +453,8 @@ section#parallax{
 				display: flex;
 				flex-direction: column;
 				justify-content: center;
+				position: relative;
+				z-index: 99;
 
 				@media#{$tablet}{
 					width: 50%;
@@ -457,17 +483,17 @@ section#parallax{
 			}
 		
 		}
-		.bg1::after{
-			//background-image:url("/dist/img/circle_p.svg");
-		}
+		// .bg1::after{
+		// 	background-image:url("/dist/img/circle_p.svg");
+		// }
 
-		.bg2::after{
-			background-image:url("/dist/img/circle_y.png");
-		}
+		// .bg2::after{
+		// 	background-image:url("/dist/img/circle_y.png");
+		// }
 
-		.bg3::after{
-			background-image:url("/dist/img/circle_b.png");
-		}
+		// .bg3::after{
+		// 	background-image:url("/dist/img/circle_b.png");
+		// }
 
 		.parallax::after{
 			content:" ";
@@ -478,7 +504,7 @@ section#parallax{
 			left:0;
 			//transform: translateZ(-1px) scale(1.5);
 			background-attachment: fixed;
-			background-size:80%;
+			background-size:100%;
 			background-position:center;
 			background-position-y:100%;
 			background-repeat: no-repeat;

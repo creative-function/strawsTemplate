@@ -578,10 +578,10 @@ html {
 body {
 	min-width: 350px;
 	background: #ED4040;
-	background-image: url("/dist/img/circle_g.png");
+	background-image: url("/dist/img/circle_g.svg");
 	background-repeat: no-repeat;
-	background-size: 80%;
-	background-position-x: -55%;
+	background-size: 90%;
+	background-position-x: 300%;
 	background-position-y: -15%;
 	font-family: parisine-plus-std-gris, sans-serif;
 	font-weight: 400;
@@ -590,8 +590,15 @@ body {
 
 @media (min-width: 767px) {
 	body {
-		background-size: 95%;
-		background-position-x: 600%;
+		background-size: 85%;
+		background-position-y: -40%;
+	}
+}
+
+@media (min-width: 900px) {
+	body {
+		background-size: 85%;
+		background-position-x: 225%;
 	}
 }
 
@@ -955,6 +962,7 @@ section#parallax .para-wrapper .wrap_product {
 	width: 100%;
 	position: relative;
 	padding: 5%;
+	margin-top: 5%;
 }
 
 @media (min-width: 767px) {
@@ -978,24 +986,46 @@ section#parallax .para-wrapper .wrap_product .product_imgs {
 	}
 }
 
-section#parallax .para-wrapper .wrap_product .product_imgs .prod-img {
+section#parallax .para-wrapper .wrap_product .product_imgs .straw-img {
 	width: 100%;
 	position: relative;
+	top: 0;
+	left: 0;
+	height: auto;
+	z-index: 99;
 }
 
-section#parallax .para-wrapper .wrap_product .product_imgs .prod-img img {
+section#parallax .para-wrapper .wrap_product .product_imgs .straw-img img {
 	width: 100%;
+}
+
+@media (min-width: 767px) {
+	section#parallax .para-wrapper .wrap_product .product_imgs .straw-img {
+		width: 80%;
+	}
 }
 
 section#parallax .para-wrapper .wrap_product .product_imgs .circ-img {
-	width: 100%;
 	position: relative;
+	height: auto;
 }
 
-section#parallax .para-wrapper .wrap_product .product_imgs .circ-img img {
-	position: absolute;
-	top: 70%;
+section#parallax .para-wrapper .wrap_product .product_imgs .circ-img .circleSVGs {
 	width: 120%;
+	position: absolute;
+	top: -145px;
+	left: 0px;
+}
+
+@media (min-width: 767px) {
+	section#parallax .para-wrapper .wrap_product .product_imgs .circ-img .circleSVGs {
+		width: 100%;
+		left: -100px;
+	}
+}
+
+section#parallax .para-wrapper .wrap_product .product_imgs .circ-img .allBlobImgs {
+	visibility: hidden;
 }
 
 section#parallax .para-wrapper .wrap_product .product_text {
@@ -1007,6 +1037,8 @@ section#parallax .para-wrapper .wrap_product .product_text {
 	        flex-direction: column;
 	-webkit-box-pack: center;
 	        justify-content: center;
+	position: relative;
+	z-index: 99;
 }
 
 @media (min-width: 767px) {
@@ -1037,14 +1069,6 @@ section#parallax .para-wrapper .wrap_product .product_text .prod_desc {
 	max-width: 340px;
 }
 
-section#parallax .para-wrapper .bg2::after {
-	background-image: url("/dist/img/circle_y.png");
-}
-
-section#parallax .para-wrapper .bg3::after {
-	background-image: url("/dist/img/circle_b.png");
-}
-
 section#parallax .para-wrapper .parallax::after {
 	content: " ";
 	position: absolute;
@@ -1053,7 +1077,7 @@ section#parallax .para-wrapper .parallax::after {
 	bottom: 0;
 	left: 0;
 	background-attachment: fixed;
-	background-size: 80%;
+	background-size: 100%;
 	background-position: center;
 	background-position-y: 100%;
 	background-repeat: no-repeat;
