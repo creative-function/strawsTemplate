@@ -4,26 +4,44 @@ console.log(`Hello chello, straws!
 Change this message, and make sure it changes in the browser 
 to verify that you're working in the right files.`)
 
-// let strawOne = document.querySelector(".straw_1");
-// let $strawTwo = document.querySelector(".straw_2");
-// let $strawThree = document.querySelector(".straw_3");
+let menuBttn = document.querySelector(".menu_bttn");
+let backBttn = document.querySelector(".back-bttn");
+
+menuBttn.addEventListener('click', popMenu);
+backBttn.addEventListener('click', popMenu);
+
+function popMenu() {
+    console.log("menu button clicked");
+    let popoutMenu = document.querySelector("#popout-menu")
+    if (popoutMenu.style.display === "block") {
+      popoutMenu.style.display = "none";
+    } else {
+      popoutMenu.style.display = "block";
+    }
+}; 
+
 
 let $strawImgs = document.querySelectorAll(".straw-img");
 
 
-var blob= new TimelineMax({repeat:-1,yoyo:true,ease:Power2.easeInOut})
+var blob= new TimelineMax({repeat:-1, repeatDelay:-1, yoyo:true,ease:Back.easeInOut})
 MorphSVGPlugin.convertToPath("#circ_p");
 //purple circle animation
 blob.to("#circ_p", 8, {morphSVG:"#blob_p"},"spill -=.1");
 blob.to("#circ_p", 8, {morphSVG:"#blob_p2"},"spill -=-2");
+blob.to("#circ_p", 4, {morphSVG:"#circ_p"},"spill +=1");
 //yellow circle animation
 MorphSVGPlugin.convertToPath("#circ_y");
 blob.to("#circ_y", 8, {morphSVG:"#blob_y"},"spill -=.1");
 blob.to("#circ_y", 8, {morphSVG:"#blob_y2"},"spill -=-2");
+blob.to("#circ_y", 4, {morphSVG:"#circ_y"},"spill +=1");
 //blue circle animation
 MorphSVGPlugin.convertToPath("#circ_b");
 blob.to("#circ_b", 8, {morphSVG:"#blob_b"},"spill -=.1");
 blob.to("#circ_b", 8, {morphSVG:"#blob_b2"},"spill -=-2");
+blob.to("#circ_b", 4, {morphSVG:"#circ_b"},"spill +=1");
+
+
 
 
 

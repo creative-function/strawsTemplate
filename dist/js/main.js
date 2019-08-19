@@ -1,14 +1,29 @@
 "use strict";
 
-console.log("Hello chello, straws! \nChange this message, and make sure it changes in the browser \nto verify that you're working in the right files."); // let strawOne = document.querySelector(".straw_1");
-// let $strawTwo = document.querySelector(".straw_2");
-// let $strawThree = document.querySelector(".straw_3");
+console.log("Hello chello, straws! \nChange this message, and make sure it changes in the browser \nto verify that you're working in the right files.");
+var menuBttn = document.querySelector(".menu_bttn");
+var backBttn = document.querySelector(".back-bttn");
+menuBttn.addEventListener('click', popMenu);
+backBttn.addEventListener('click', popMenu);
 
+function popMenu() {
+  console.log("menu button clicked");
+  var popoutMenu = document.querySelector("#popout-menu");
+
+  if (popoutMenu.style.display === "block") {
+    popoutMenu.style.display = "none";
+  } else {
+    popoutMenu.style.display = "block";
+  }
+}
+
+;
 var $strawImgs = document.querySelectorAll(".straw-img");
 var blob = new TimelineMax({
   repeat: -1,
+  repeatDelay: -1,
   yoyo: true,
-  ease: Power2.easeInOut
+  ease: Back.easeInOut
 });
 MorphSVGPlugin.convertToPath("#circ_p"); //purple circle animation
 
@@ -17,7 +32,10 @@ blob.to("#circ_p", 8, {
 }, "spill -=.1");
 blob.to("#circ_p", 8, {
   morphSVG: "#blob_p2"
-}, "spill -=-2"); //yellow circle animation
+}, "spill -=-2");
+blob.to("#circ_p", 4, {
+  morphSVG: "#circ_p"
+}, "spill +=1"); //yellow circle animation
 
 MorphSVGPlugin.convertToPath("#circ_y");
 blob.to("#circ_y", 8, {
@@ -25,7 +43,10 @@ blob.to("#circ_y", 8, {
 }, "spill -=.1");
 blob.to("#circ_y", 8, {
   morphSVG: "#blob_y2"
-}, "spill -=-2"); //blue circle animation
+}, "spill -=-2");
+blob.to("#circ_y", 4, {
+  morphSVG: "#circ_y"
+}, "spill +=1"); //blue circle animation
 
 MorphSVGPlugin.convertToPath("#circ_b");
 blob.to("#circ_b", 8, {
@@ -34,6 +55,9 @@ blob.to("#circ_b", 8, {
 blob.to("#circ_b", 8, {
   morphSVG: "#blob_b2"
 }, "spill -=-2");
+blob.to("#circ_b", 4, {
+  morphSVG: "#circ_b"
+}, "spill +=1");
 var tl = new TimelineMax({
   repeat: -1,
   ease: Power1.easeInOut

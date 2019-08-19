@@ -619,7 +619,7 @@ section#nav-top nav {
 	        justify-content: space-between;
 }
 
-section#nav-top nav img {
+section#nav-top nav img#logo-main {
 	height: 50px;
 	top: 25%;
 }
@@ -633,25 +633,26 @@ section#nav-top nav .hamburger-menu {
 	        flex-direction: row;
 	-webkit-box-pack: space-evenly;
 	        justify-content: space-evenly;
+	position: relative;
 }
 
-section#nav-top nav .hamburger-menu a {
-	text-decoration: none;
-	color: #fff;
+section#nav-top nav .hamburger-menu .menu_bttn {
 	display: -webkit-box;
 	display: flex;
 	-webkit-box-orient: horizontal;
 	-webkit-box-direction: normal;
 	        flex-direction: row;
+	justify-content: space-around;
+	text-decoration: none;
 }
 
-section#nav-top nav .hamburger-menu h2 {
+section#nav-top nav .hamburger-menu .menu_bttn h2 {
 	font-size: 1.2em;
 	color: white;
 	align-self: center;
 }
 
-section#nav-top nav .hamburger-menu .menuToggle {
+section#nav-top nav .hamburger-menu .menu_bttn .menuToggle {
 	width: 28%;
 	height: 37px;
 	display: -webkit-box;
@@ -664,25 +665,78 @@ section#nav-top nav .hamburger-menu .menuToggle {
 	        justify-content: space-between;
 }
 
-section#nav-top nav .hamburger-menu .menuToggle .bttn_circ {
+section#nav-top nav .hamburger-menu .menu_bttn .menuToggle .bttn_circ {
 	width: 15px;
 	height: 15px;
 	background-color: white;
 }
 
-section#nav-top nav ul {
-	display: -webkit-box;
-	display: flex;
-	-webkit-box-orient: horizontal;
-	-webkit-box-direction: normal;
-	        flex-direction: row;
-	-webkit-box-pack: end;
-	        justify-content: flex-end;
+section#nav-top nav .hamburger-menu #popout-menu {
+	opacity: 1;
+	position: absolute;
+	overflow: hidden;
+	top: -140px;
+	right: 0;
+	width: 400px;
+	display: none;
 }
 
-section#nav-top nav ul li {
-	margin-left: 10px;
-	padding: 5px;
+section#nav-top nav .hamburger-menu #popout-menu .popout-menu_list {
+	width: 100%;
+	position: absolute;
+	top: 30%;
+	left: 40%;
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	        flex-direction: column;
+	z-index: 99;
+}
+
+section#nav-top nav .hamburger-menu #popout-menu .popout-menu_list .back-bttn {
+	width: 25%;
+	font-size: 1.3em;
+	background-color: transparent;
+	font-family: parisine-plus-std-gris, sans-serif;
+	font-weight: 400;
+	color: white;
+	border: 0;
+	position: relative;
+	top: -20px;
+	left: 100px;
+}
+
+section#nav-top nav .hamburger-menu #popout-menu .popout-menu_list .back-bttn:hover {
+	cursor: hand;
+}
+
+section#nav-top nav .hamburger-menu #popout-menu .popout-menu_list a {
+	text-decoration: none;
+	width: 150px;
+	padding: 2%;
+	margin: 4%;
+	background-color: #902aed;
+}
+
+section#nav-top nav .hamburger-menu #popout-menu .popout-menu_list a li {
+	text-align: center;
+	font-family: parisine-plus-std-gris, sans-serif;
+	font-weight: 400;
+	color: #fdc249;
+}
+
+section#nav-top nav .hamburger-menu #popout-menu #popout-menu_bg {
+	position: relative;
+	z-index: 1;
+}
+
+section#nav-top nav .hamburger-menu #popout-menu #popout-menu_bg #circle_yellow {
+	width: 150%;
+}
+
+section#nav-top nav .hamburger-menu #popout-menu #popout-menu_bg .allBlobImgs {
+	visibility: hidden;
 }
 
 section#hero {

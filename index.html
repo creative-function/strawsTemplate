@@ -12,35 +12,42 @@
 	</head>
 	<body>
         <section id="nav-top">
-           
-
             <nav>
-                    <img src="dist/img/logo-02.svg">
-                    <div class="hamburger-menu">
-                         <!-- <ul>
-                            <a href="gallery.html"><li>GALLERY</li></a>
-                            <a href="about.html"><li>ABOUT</li></a>
-                            <a><li>SUBSCRIBE</li></a>
-                        </ul> -->
-                         <h2>MENU</h2>
-                         <div class="menuToggle">
-                             <div class="bttn_circ"></div>
-                             <div class="bttn_circ"></div>
-                             <div class="bttn_circ"></div>
-                             <div class="bttn_circ"></div>
-                         </div>
+                <img id="logo-main" src="dist/img/logo-02.svg">
+                <div class="hamburger-menu">
+                      
+                   <a href="#" class="menu_bttn">
+                        <h2>MENU</h2>
+                        <div class="menuToggle">  
+                            <div class="bttn_circ"></div>
+                            <div class="bttn_circ"></div>
+                            <div class="bttn_circ"></div>
+                            <div class="bttn_circ"></div>
+                        </div>
+                   </a> 
 
+                    <div id="popout-menu">
+                        <ul class="popout-menu_list">
+                                <button class="back-bttn">Back</button>
+                                <a href="#"><li>LOG IN</li></a>
+                                <a href="#"><li>CART</li></a>
+                                <a href="#"><li>SAVED</li></a>
+                                <a href="#"><li>SUPPORT</li></a>
+                                <a href="#"><li>ABOUT US</li></a>
+                                <a href="#"><li>SUBSCRIBE</li></a>
+                        </ul>
+
+                        <!-- <img id="popout-menu_bg" src="dist/img/circle_y.svg"> -->
+
+                        <div  id="popout-menu_bg">
+                                <svg id="circle_yellow" class="circleSVGs" xmlns="http://www.w3.org/2000/svg" width="749" height="749" viewBox="0 0 749 749">
+                                    <circle id="circ_y" data-name="Ellipse 24" cx="374.5" cy="374.5" r="374.5" fill="#fdc249"/>
+                                    <path id="blob_y" class="allBlobImgs" data-name="Path 93" d="M266.648,204.821C368.639,11.368,749,167.669,749,374.5S690.092,708.162,366.227,849.781,0,581.331,0,374.5,164.658,398.274,266.648,204.821Z" transform="translate(0 -116.746)" fill="#fdc249"/>
+                                 
+                                </svg>     
+                            </div>
                     </div>
-               
-                    <!-- <ul id="menu">
-                    <a href="#"><li>LOGIN</li></a>
-                    <a href="#"><li>CART</li></a>
-                    <a href="#"><li>SAVED</li></a>
-                    <a href="#"><li>SUPPORT</li></a>
-                    <a href="#"><li>ABOUT US</li></a>
-                    <a href="#"><li>SUBSCRIBE</li></a>
-                    </ul> -->
-
+                </div>
             </nav>
         </section>
         <section id="hero">
