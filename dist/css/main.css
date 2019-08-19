@@ -987,6 +987,17 @@ section#parallax .para-wrapper .wrap_product .product_imgs .prod-img img {
 	width: 100%;
 }
 
+section#parallax .para-wrapper .wrap_product .product_imgs .circ-img {
+	width: 100%;
+	position: relative;
+}
+
+section#parallax .para-wrapper .wrap_product .product_imgs .circ-img img {
+	position: absolute;
+	top: 70%;
+	width: 120%;
+}
+
 section#parallax .para-wrapper .wrap_product .product_text {
 	width: 100%;
 	display: -webkit-box;
@@ -1024,10 +1035,6 @@ section#parallax .para-wrapper .wrap_product .product_text .prod_cta {
 
 section#parallax .para-wrapper .wrap_product .product_text .prod_desc {
 	max-width: 340px;
-}
-
-section#parallax .para-wrapper .bg1::after {
-	background-image: url("/dist/img/circle_p.png");
 }
 
 section#parallax .para-wrapper .bg2::after {

@@ -407,9 +407,22 @@ section#parallax{
 					img{
 						width:100%;
 					}
-	
 				}
+
+				.circ-img{
+					width:100%;
+					position: relative;
+					
+					img{
+						position: absolute;
+						top:70%;
+						width:120%;
+					}
+				}
+
 			}
+
+			
 	
 			.product_text{
 				width:100%;
@@ -445,7 +458,7 @@ section#parallax{
 		
 		}
 		.bg1::after{
-			background-image:url("/dist/img/circle_p.png");
+			//background-image:url("/dist/img/circle_p.svg");
 		}
 
 		.bg2::after{
