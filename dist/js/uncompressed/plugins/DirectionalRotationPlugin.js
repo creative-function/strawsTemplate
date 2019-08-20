@@ -1,3 +1,7 @@
+"use strict";
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
 /*!
  * VERSION: 0.3.1
  * DATE: 2018-02-15
@@ -9,92 +13,121 @@
  * 
  * @author: Jack Doyle, jack@greensock.com
  **/
+
 /* eslint-disable */
-var _gsScope = (typeof(module) !== "undefined" && module.exports && typeof(global) !== "undefined") ? global : this || window; //helps ensure compatibility with AMD/RequireJS and CommonJS/Node
-(_gsScope._gsQueue || (_gsScope._gsQueue = [])).push( function() {
+var _gsScope = typeof module !== "undefined" && module.exports && typeof global !== "undefined" ? global : void 0 || window; //helps ensure compatibility with AMD/RequireJS and CommonJS/Node
 
-	"use strict";
 
-	_gsScope._gsDefine.plugin({
-		propName: "directionalRotation",
-		version: "0.3.1",
-		API: 2,
+(_gsScope._gsQueue || (_gsScope._gsQueue = [])).push(function () {
+  "use strict";
 
-		//called when the tween renders for the first time. This is where initial values should be recorded and any setup routines should run.
-		init: function(target, value, tween, index) {
-			if (typeof(value) !== "object") {
-				value = {rotation:value};
-			}
-			this.finals = {};
-			var cap = (value.useRadians === true) ? Math.PI * 2 : 360,
-				min = 0.000001,
-				p, v, start, end, dif, split;
-			for (p in value) {
-				if (p !== "useRadians") {
-					end = value[p];
-					if (typeof(end) === "function") {
-						end = end(index, target);
-					}
-					split = (end + "").split("_");
-					v = split[0];
-					start = parseFloat( (typeof(target[p]) !== "function") ? target[p] : target[ ((p.indexOf("set") || typeof(target["get" + p.substr(3)]) !== "function") ? p : "get" + p.substr(3)) ]() );
-					end = this.finals[p] = (typeof(v) === "string" && v.charAt(1) === "=") ? start + parseInt(v.charAt(0) + "1", 10) * Number(v.substr(2)) : Number(v) || 0;
-					dif = end - start;
-					if (split.length) {
-						v = split.join("_");
-						if (v.indexOf("short") !== -1) {
-							dif = dif % cap;
-							if (dif !== dif % (cap / 2)) {
-								dif = (dif < 0) ? dif + cap : dif - cap;
-							}
-						}
-						if (v.indexOf("_cw") !== -1 && dif < 0) {
-							dif = ((dif + cap * 9999999999) % cap) - ((dif / cap) | 0) * cap;
-						} else if (v.indexOf("ccw") !== -1 && dif > 0) {
-							dif = ((dif - cap * 9999999999) % cap) - ((dif / cap) | 0) * cap;
-						}
-					}
-					if (dif > min || dif < -min) {
-						this._addTween(target, p, start, start + dif, p);
-						this._overwriteProps.push(p);
-					}
-				}
-			}
-			return true;
-		},
+  _gsScope._gsDefine.plugin({
+    propName: "directionalRotation",
+    version: "0.3.1",
+    API: 2,
+    //called when the tween renders for the first time. This is where initial values should be recorded and any setup routines should run.
+    init: function init(target, value, tween, index) {
+      if (_typeof(value) !== "object") {
+        value = {
+          rotation: value
+        };
+      }
 
-		//called each time the values should be updated, and the ratio gets passed as the only parameter (typically it's a value between 0 and 1, but it can exceed those when using an ease like Elastic.easeOut or Back.easeOut, etc.)
-		set: function(ratio) {
-			var pt;
-			if (ratio !== 1) {
-				this._super.setRatio.call(this, ratio);
-			} else {
-				pt = this._firstPT;
-				while (pt) {
-					if (pt.f) {
-						pt.t[pt.p](this.finals[pt.p]);
-					} else {
-						pt.t[pt.p] = this.finals[pt.p];
-					}
-					pt = pt._next;
-				}
-			}
-		}
+      this.finals = {};
+      var cap = value.useRadians === true ? Math.PI * 2 : 360,
+          min = 0.000001,
+          p,
+          v,
+          start,
+          end,
+          dif,
+          split;
 
-	})._autoCSS = true;
+      for (p in value) {
+        if (p !== "useRadians") {
+          end = value[p];
 
-}); if (_gsScope._gsDefine) { _gsScope._gsQueue.pop()(); }
+          if (typeof end === "function") {
+            end = end(index, target);
+          }
 
-//export to AMD/RequireJS and CommonJS/Node (precursor to full modular build system coming at a later date)
-(function(name) {
-	"use strict";
-	var getGlobal = function() {
-		return (_gsScope.GreenSockGlobals || _gsScope)[name];
-	};
-	if (typeof(module) !== "undefined" && module.exports) { //node
-		require("../TweenLite.js");
-		module.exports = getGlobal();
-	} else if (typeof(define) === "function" && define.amd) { //AMD
-		define(["TweenLite"], getGlobal);
-	}
-}("DirectionalRotationPlugin"));
+          split = (end + "").split("_");
+          v = split[0];
+          start = parseFloat(typeof target[p] !== "function" ? target[p] : target[p.indexOf("set") || typeof target["get" + p.substr(3)] !== "function" ? p : "get" + p.substr(3)]());
+          end = this.finals[p] = typeof v === "string" && v.charAt(1) === "=" ? start + parseInt(v.charAt(0) + "1", 10) * Number(v.substr(2)) : Number(v) || 0;
+          dif = end - start;
+
+          if (split.length) {
+            v = split.join("_");
+
+            if (v.indexOf("short") !== -1) {
+              dif = dif % cap;
+
+              if (dif !== dif % (cap / 2)) {
+                dif = dif < 0 ? dif + cap : dif - cap;
+              }
+            }
+
+            if (v.indexOf("_cw") !== -1 && dif < 0) {
+              dif = (dif + cap * 9999999999) % cap - (dif / cap | 0) * cap;
+            } else if (v.indexOf("ccw") !== -1 && dif > 0) {
+              dif = (dif - cap * 9999999999) % cap - (dif / cap | 0) * cap;
+            }
+          }
+
+          if (dif > min || dif < -min) {
+            this._addTween(target, p, start, start + dif, p);
+
+            this._overwriteProps.push(p);
+          }
+        }
+      }
+
+      return true;
+    },
+    //called each time the values should be updated, and the ratio gets passed as the only parameter (typically it's a value between 0 and 1, but it can exceed those when using an ease like Elastic.easeOut or Back.easeOut, etc.)
+    set: function set(ratio) {
+      var pt;
+
+      if (ratio !== 1) {
+        this._super.setRatio.call(this, ratio);
+      } else {
+        pt = this._firstPT;
+
+        while (pt) {
+          if (pt.f) {
+            pt.t[pt.p](this.finals[pt.p]);
+          } else {
+            pt.t[pt.p] = this.finals[pt.p];
+          }
+
+          pt = pt._next;
+        }
+      }
+    }
+  })._autoCSS = true;
+});
+
+if (_gsScope._gsDefine) {
+  _gsScope._gsQueue.pop()();
+} //export to AMD/RequireJS and CommonJS/Node (precursor to full modular build system coming at a later date)
+
+
+(function (name) {
+  "use strict";
+
+  var getGlobal = function getGlobal() {
+    return (_gsScope.GreenSockGlobals || _gsScope)[name];
+  };
+
+  if (typeof module !== "undefined" && module.exports) {
+    //node
+    require("../TweenLite.js");
+
+    module.exports = getGlobal();
+  } else if (typeof define === "function" && define.amd) {
+    //AMD
+    define(["TweenLite"], getGlobal);
+  }
+})("DirectionalRotationPlugin");
+//# sourceMappingURL=DirectionalRotationPlugin.js.map
