@@ -97,6 +97,8 @@ section#nav-top{
 				}
 				
 				.menuToggle{
+					min-width:37px;
+					max-width:37px;
 					width: 10%;
 					height: 37px;
 					display:flex;
@@ -509,26 +511,58 @@ section#parallax{
 
 ///ABOUT PAGE
 
-.sectionTitle{
-	width:90%;
-	color:$gridWhite;
-	@include outlineText();
 
-	h1{
-		font-size:3em;
-		margin-bottom:10%;
-
-		@media#{$tablet}{
-		    text-align: center;
-		    width: 100%;
-		 }
-
-	}
-}
 section#aboutUs{
-	width: 95%;
+	width: 100%;
 	margin: 0% auto;
-	height: 100vh;
+	//height: 100vh;
+
+	.sectionTitle{
+		width:95%;
+		margin:0 auto;
+		
+		.back-nav{
+			margin-top:2%;
+			width:95%;			
+			display: flex;
+			justify-content: space-between;
+			align-items: baseline;
+
+			.bck_bttn{
+				position: relative;
+				display:flex;
+				border-top:2px solid white;
+				padding-top:10%;
+				span{
+					position: absolute;
+					top:-10px;
+					left:-4px;
+				}
+			}
+
+			.nav-cta{
+				border-top:2px solid white;
+				padding-top:1%;
+			}
+		}
+
+		.pageTitle{
+			h1{
+				color:$gridWhite;
+				@include mainText();
+				font-size:3em;
+				margin:3% 0;
+		
+				@media#{$tablet}{
+					text-align: center;
+					width: 100%;
+				 }
+		
+			}
+		}
+	
+		
+	}
 	
 	.talkingPoints{ 
 		width:80%;
@@ -539,10 +573,9 @@ section#aboutUs{
 		display: flex;
 		flex-direction: column;
 		 
-		 @media#{$tablet}{ //take off width and max-width so they sit nicely in a row
-		    flex-direction: row;
-		 }
-		
+		@media#{$tablet}{
+			margin-top:-8%;
+		}
 		.Point{
 			width:100%;
 			display: flex;
@@ -550,7 +583,7 @@ section#aboutUs{
 			margin-bottom:5%;
 
 			@media#{$tablet}{
-		    margin: 3%;
+		    margin: 5%;
 		 }
 			
 	
@@ -558,9 +591,9 @@ section#aboutUs{
 				width:30%;
 				border-bottom: 2px solid white;
 				h1{
-					font-size:3em;
+					font-size:4em;
 					color:$gridWhite;
-					@include outlineText();
+					@include outlineTextnum();
 				}
 			}
 		
@@ -576,14 +609,39 @@ section#aboutUs{
 }
 
 section#diagram{
-	width: 95%;
-	height: 100vh;
+	width: 99%;
+	height: 120vh;
 	margin:0 auto;
-	background-image: url("/dist/img/circle_b.png");
+	background-image: url("../img/circle_b.svg");
 	background-repeat: no-repeat;
-	background-size: contain;
+	background-size: cover;
 	background-position: center;
 	position: relative;
+
+	.sectionTitle{
+		width:95%;
+		margin:0% auto;
+
+		.pageTitle{
+			width:100%;
+			h1{
+				color:$gridWhite;
+				@include mainText();
+				font-size:2.5em;
+				margin:3% 0;
+				position: relative;
+				top:75px;
+		
+				@media#{$tablet}{
+					width: 100%;
+				 }
+		
+			}
+		}
+	
+	}
+
+
 	.diagramWrapper{
 		position:absolute;
 		top:35%;
@@ -592,7 +650,6 @@ section#diagram{
 		margin: 0 auto;
 		@media#{$tablet}{
 			width:100%;
-			top:25%;
 		}
 		@media#{$desktop}{
 			width:100%;
@@ -625,32 +682,53 @@ section#diagram{
 					}
 
 					.hoverTxt{
-						font-size:70%;
+						font-size:60%;
 						text-align: center;
 						color:white;
 						position: relative;
 						z-index: 999;
+						@include mainText();
 					}
 
 					.txt_1{
 						top:112px;
 						left:-60px;
+						@media#{$tablet}{
+							font-size:85%;					
+							top:130px;
+							left:-47px;				
+						}
 					}
 
 					.txt_2{
 						top:-55px;
-						right:50px;
+						right:35px;
+						@media#{$tablet}{
+							font-size:85%;					
+							top:-45px;
+							right:35px;				
+						}
 					}
 
 
 					.txt_3{
 						top:-80px;
-						right:20px;
+						right:10px;
+						@media#{$tablet}{
+							font-size:80%;					
+							top:-95px;
+							right:2px;				
+						}
 					}
 
 					.txt_4{
 						bottom:-140px;
-						left:50px;
+						left:60px;
+						@media#{$tablet}{
+							font-size:80%;					
+							bottom:-157px;
+							left:82px;				
+						}
 					}
 
 					.hvrImg{
@@ -697,36 +775,33 @@ section#diagram{
 				.strawImg{
 					display: block;
 					margin: 0 auto;
-					width: auto;	
+					width: auto;
+						
 				}
 
 				.img_1{
-					width:auto;
+					width: 100%;
 					@media#{$tablet}{
-						max-width:100%;
+						max-width:70%;
 					}
 				}
 
 				.img_2{
-					max-width:26.5%;
-					
-					@media#{$tablet}{
-						max-width:19%;
-					}
+					width: 20%;
+					max-width:15%;
+
 				}
 
 				.img_3{
-					max-width:57%;
-					@media#{$tablet}{
-						max-width:40%;
-					}
+					width: 45%;
+					max-width:30%;
+
 				}
 
 				.img_4{
-					max-width:43.5%;
-					@media#{$tablet}{
-						max-width:30%;
-					}
+					width: 35%;
+					max-width:22%;
+
 				}
 			}
 

@@ -655,6 +655,8 @@ section#nav-top nav .hamburger-menu .menu_bttn h2 {
 }
 
 section#nav-top nav .hamburger-menu .menu_bttn .menuToggle {
+	min-width: 37px;
+	max-width: 37px;
 	width: 10%;
 	height: 37px;
 	display: -webkit-box;
@@ -1147,32 +1149,60 @@ section#parallax .para-wrapper .parallax::after {
 	}
 }
 
-.sectionTitle {
-	width: 90%;
-	color: #FFFFFF;
-	font-family: parisine-plus-std-gris, sans-serif;
-	font-weight: 700;
-	color: transparent;
-	-webkit-text-stroke-width: 1px;
-	-webkit-text-stroke-color: white;
+section#aboutUs {
+	width: 100%;
+	margin: 0% auto;
 }
 
-.sectionTitle h1 {
+section#aboutUs .sectionTitle {
+	width: 95%;
+	margin: 0 auto;
+}
+
+section#aboutUs .sectionTitle .back-nav {
+	margin-top: 2%;
+	width: 95%;
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-pack: justify;
+	        justify-content: space-between;
+	-webkit-box-align: baseline;
+	        align-items: baseline;
+}
+
+section#aboutUs .sectionTitle .back-nav .bck_bttn {
+	position: relative;
+	display: -webkit-box;
+	display: flex;
+	border-top: 2px solid white;
+	padding-top: 10%;
+}
+
+section#aboutUs .sectionTitle .back-nav .bck_bttn span {
+	position: absolute;
+	top: -10px;
+	left: -4px;
+}
+
+section#aboutUs .sectionTitle .back-nav .nav-cta {
+	border-top: 2px solid white;
+	padding-top: 1%;
+}
+
+section#aboutUs .sectionTitle .pageTitle h1 {
+	color: #FFFFFF;
+	font-family: parisine-plus-std-gris, sans-serif;
+	font-weight: 400;
+	color: white;
 	font-size: 3em;
-	margin-bottom: 10%;
+	margin: 3% 0;
 }
 
 @media (min-width: 767px) {
-	.sectionTitle h1 {
+	section#aboutUs .sectionTitle .pageTitle h1 {
 		text-align: center;
 		width: 100%;
 	}
-}
-
-section#aboutUs {
-	width: 95%;
-	margin: 0% auto;
-	height: 100vh;
 }
 
 section#aboutUs .talkingPoints {
@@ -1189,9 +1219,7 @@ section#aboutUs .talkingPoints {
 
 @media (min-width: 767px) {
 	section#aboutUs .talkingPoints {
-		-webkit-box-orient: horizontal;
-		-webkit-box-direction: normal;
-		        flex-direction: row;
+		margin-top: -8%;
 	}
 }
 
@@ -1207,7 +1235,7 @@ section#aboutUs .talkingPoints .Point {
 
 @media (min-width: 767px) {
 	section#aboutUs .talkingPoints .Point {
-		margin: 3%;
+		margin: 5%;
 	}
 }
 
@@ -1217,12 +1245,12 @@ section#aboutUs .talkingPoints .Point .tp_number {
 }
 
 section#aboutUs .talkingPoints .Point .tp_number h1 {
-	font-size: 3em;
+	font-size: 4em;
 	color: #FFFFFF;
 	font-family: parisine-plus-std-gris, sans-serif;
 	font-weight: 700;
 	color: transparent;
-	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-width: 2px;
 	-webkit-text-stroke-color: white;
 }
 
@@ -1233,14 +1261,40 @@ section#aboutUs .talkingPoints .Point .tp_text {
 }
 
 section#diagram {
-	width: 95%;
-	height: 100vh;
+	width: 99%;
+	height: 120vh;
 	margin: 0 auto;
-	background-image: url("/dist/img/circle_b.png");
+	background-image: url("../img/circle_b.svg");
 	background-repeat: no-repeat;
-	background-size: contain;
+	background-size: cover;
 	background-position: center;
 	position: relative;
+}
+
+section#diagram .sectionTitle {
+	width: 95%;
+	margin: 0% auto;
+}
+
+section#diagram .sectionTitle .pageTitle {
+	width: 100%;
+}
+
+section#diagram .sectionTitle .pageTitle h1 {
+	color: #FFFFFF;
+	font-family: parisine-plus-std-gris, sans-serif;
+	font-weight: 400;
+	color: white;
+	font-size: 2.5em;
+	margin: 3% 0;
+	position: relative;
+	top: 75px;
+}
+
+@media (min-width: 767px) {
+	section#diagram .sectionTitle .pageTitle h1 {
+		width: 100%;
+	}
 }
 
 section#diagram .diagramWrapper {
@@ -1253,7 +1307,6 @@ section#diagram .diagramWrapper {
 @media (min-width: 767px) {
 	section#diagram .diagramWrapper {
 		width: 100%;
-		top: 25%;
 	}
 }
 
@@ -1300,11 +1353,14 @@ section#diagram .diagramWrapper .wrapStraws .straw .strawHover {
 }
 
 section#diagram .diagramWrapper .wrapStraws .straw .strawHover .hoverTxt {
-	font-size: 70%;
+	font-size: 60%;
 	text-align: center;
 	color: white;
 	position: relative;
 	z-index: 999;
+	font-family: parisine-plus-std-gris, sans-serif;
+	font-weight: 400;
+	color: white;
 }
 
 section#diagram .diagramWrapper .wrapStraws .straw .strawHover .txt_1 {
@@ -1312,19 +1368,51 @@ section#diagram .diagramWrapper .wrapStraws .straw .strawHover .txt_1 {
 	left: -60px;
 }
 
+@media (min-width: 767px) {
+	section#diagram .diagramWrapper .wrapStraws .straw .strawHover .txt_1 {
+		font-size: 85%;
+		top: 130px;
+		left: -47px;
+	}
+}
+
 section#diagram .diagramWrapper .wrapStraws .straw .strawHover .txt_2 {
 	top: -55px;
-	right: 50px;
+	right: 35px;
+}
+
+@media (min-width: 767px) {
+	section#diagram .diagramWrapper .wrapStraws .straw .strawHover .txt_2 {
+		font-size: 85%;
+		top: -45px;
+		right: 35px;
+	}
 }
 
 section#diagram .diagramWrapper .wrapStraws .straw .strawHover .txt_3 {
 	top: -80px;
-	right: 20px;
+	right: 10px;
+}
+
+@media (min-width: 767px) {
+	section#diagram .diagramWrapper .wrapStraws .straw .strawHover .txt_3 {
+		font-size: 80%;
+		top: -95px;
+		right: 2px;
+	}
 }
 
 section#diagram .diagramWrapper .wrapStraws .straw .strawHover .txt_4 {
 	bottom: -140px;
-	left: 50px;
+	left: 60px;
+}
+
+@media (min-width: 767px) {
+	section#diagram .diagramWrapper .wrapStraws .straw .strawHover .txt_4 {
+		font-size: 80%;
+		bottom: -157px;
+		left: 82px;
+	}
 }
 
 section#diagram .diagramWrapper .wrapStraws .straw .strawHover .hvrImg {
@@ -1388,43 +1476,28 @@ section#diagram .diagramWrapper .wrapStraws .straw .strawImg {
 }
 
 section#diagram .diagramWrapper .wrapStraws .straw .img_1 {
-	width: auto;
+	width: 100%;
 }
 
 @media (min-width: 767px) {
 	section#diagram .diagramWrapper .wrapStraws .straw .img_1 {
-		max-width: 100%;
+		max-width: 70%;
 	}
 }
 
 section#diagram .diagramWrapper .wrapStraws .straw .img_2 {
-	max-width: 26.5%;
-}
-
-@media (min-width: 767px) {
-	section#diagram .diagramWrapper .wrapStraws .straw .img_2 {
-		max-width: 19%;
-	}
+	width: 20%;
+	max-width: 15%;
 }
 
 section#diagram .diagramWrapper .wrapStraws .straw .img_3 {
-	max-width: 57%;
-}
-
-@media (min-width: 767px) {
-	section#diagram .diagramWrapper .wrapStraws .straw .img_3 {
-		max-width: 40%;
-	}
+	width: 45%;
+	max-width: 30%;
 }
 
 section#diagram .diagramWrapper .wrapStraws .straw .img_4 {
-	max-width: 43.5%;
-}
-
-@media (min-width: 767px) {
-	section#diagram .diagramWrapper .wrapStraws .straw .img_4 {
-		max-width: 30%;
-	}
+	width: 35%;
+	max-width: 22%;
 }
 
 @media (min-width: 767px) {
