@@ -625,6 +625,7 @@ section#nav-top nav img#logo-main {
 }
 
 section#nav-top nav .hamburger-menu {
+	width: 50%;
 	height: 50px;
 	display: -webkit-box;
 	display: flex;
@@ -637,6 +638,7 @@ section#nav-top nav .hamburger-menu {
 }
 
 section#nav-top nav .hamburger-menu .menu_bttn {
+	width: 100%;
 	display: -webkit-box;
 	display: flex;
 	-webkit-box-orient: horizontal;
@@ -653,7 +655,7 @@ section#nav-top nav .hamburger-menu .menu_bttn h2 {
 }
 
 section#nav-top nav .hamburger-menu .menu_bttn .menuToggle {
-	width: 28%;
+	width: 10%;
 	height: 37px;
 	display: -webkit-box;
 	display: flex;
