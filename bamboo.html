@@ -12,39 +12,66 @@
 		<link rel="stylesheet" href="dist/css/main.css">
 
 	</head>
-	<body>
-		<section id="nav-section">
-			<div class="nav-menu">
+	<body class="bamboo">
+        <section id="nav-top">
+                <nav>
+                    <img id="logo-main" src="dist/img/logo-02.svg">
+                    <div class="hamburger-menu">
+                        <a  href="index.html" class="xtra"><h2 >HOME</h2></a>
+                        <a  href="about.html" class="xtra" ><h2 >ABOUT</h2></a>
+                
+                        <a href="#" class="menu_bttn">
+                            <h2>MENU</h2>
+                            <div class="menuToggle">  
+                                <div class="bttn_circ"></div>
+                                <div class="bttn_circ"></div>
+                                <div class="bttn_circ"></div>
+                                <div class="bttn_circ"></div>
+                            </div>
+                        </a> 
+    
+                        <div id="popout-menu">
+                            <ul class="popout-menu_list">
+                                <button class="back-bttn">Back</button>
+                                <a href="#"><li>LOG IN</li></a>
+                                <a href="#"><li>CART</li></a>
+                                <a href="#"><li>SAVED</li></a>
+                                <a href="#"><li>SUPPORT</li></a>
+                                <a href="#"><li>ABOUT US</li></a>
+                                <a href="#"><li>SUBSCRIBE</li></a>
+                            </ul>
+    
+                            <!-- <img id="popout-menu_bg" src="dist/img/circle_y.svg"> -->
+    
+                            <div  id="popout-menu_bg">
+                                <svg id="circle_yellow" class="circleSVGs" xmlns="http://www.w3.org/2000/svg" width="749" height="749" viewBox="0 0 749 749">
+                                    <circle id="circ_y" data-name="Ellipse 24" cx="374.5" cy="374.5" r="374.5" fill="#fdc249"/>
+                                    <path id="blob_y" class="allBlobImgs" data-name="Path 93" d="M266.648,204.821C368.639,11.368,749,167.669,749,374.5S690.092,708.162,366.227,849.781,0,581.331,0,374.5,164.658,398.274,266.648,204.821Z" transform="translate(0 -116.746)" fill="#fdc249"/>
+                                    
+                                </svg>     
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+         </section>
+        
+        <div class="sectionTitle">
+                <div class="back-nav">
+                    <a class="back-button">
+                        <div class="bck_bttn">
+                            <span><</span>
+                            <p>Back</p>
+                        </div>
+                    </a>
+                    <div class="nav-cta">
+                        <p>Our straws are made from all-natural bamboo wood. Hand crafted and recylcable, our bamboo is one of the highest quality </p>
+                    </div>
+                </div>
+                <div class="pageTitle">
+                    <h1>bamboo straws</h1>
+                </div>
+        </div>
 
-				<div class="nav-logo">
-
-					<img src="dist/img/surgror-logo-yellow.png">
-
-				</div>
-				<nav>
-					<ul>
-						<a href="index.html"><li>HOME</li></a>
-						<a href="about.html"><li>ABOUT</li></a>
-						<a href="#"><li>SHOPPING CART</li></a>
-					</ul>
-				</nav>
-			</div>
-		</section>
-		<section id='titleCap'>
-			<div class="page-title">
-				<h1>bamboo straws</h1>
-				<a href="gallery.html"><button>paper</button></a>
-                <a href="metal.html"><button>metal</button></a>
-				<!-- <p class="snippet">
-                    RESPONSIVE GALLERY <br>
-                    GALLERY HOVER STATE <br>
-                    MENU STATES  <br>
-                    COLORS / CIRCLES  <br>
-                    ASSETS <br>
-					
-				</p> -->
-			</div>
-		</section>
 		<section id="portfolio" class="layout layout-portfolio">
             <div class="container">
                 <div class="row portfolio-grid">
@@ -104,7 +131,12 @@
         </section>
 
         <footer>
-        	
+                <section id='titleCap'>
+                        <div class="page-title">
+                            <a href="gallery.html"><button>paper</button></a>
+                            <a href="metal.html"><button>metal</button></a>
+                        </div>
+                </section>
         </footer>
 
 		<script src="dist/js/main.js"></script>

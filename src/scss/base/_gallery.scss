@@ -28,8 +28,39 @@ TABLE OF CONTENTS:
 	box-sizing: border-box;
 }
 
-body {
+body.gallery{
+	min-width:350px;
 	background: $gridRed;
+	background-image: url("../img/circle_p.svg");
+	background-repeat: no-repeat;
+	background-size: 90%;
+	background-position-x:400%; 
+	background-position-y:-15%; 
+	@include mainText();
+
+}
+
+body.metal{
+	min-width:350px;
+	background: $gridRed;
+	background-image: url("../img/circle_y.svg");
+	background-repeat: no-repeat;
+	background-size: 90%;
+	background-position-x:400%; 
+	background-position-y:-15%; 
+	@include mainText();
+
+}
+
+body.bamboo{
+	min-width:350px;
+	background: $gridRed;
+	background-image: url("../img/circle_b.svg");
+	background-repeat: no-repeat;
+	background-size: 90%;
+	background-position-x:400%; 
+	background-position-y:-15%; 
+	@include mainText();
 
 }
 
@@ -98,41 +129,68 @@ section#nav-section{
 	}
 }
 
+.sectionTitle{
+	width:95%;
+	margin:0 auto;
+	
+	.back-nav{
+		margin-top:2%;
+		width:95%;			
+		display: flex;
+		justify-content: space-between;
+		align-items: baseline;
+
+		.bck_bttn{
+			position: relative;
+			display:flex;
+			border-top:2px solid white;
+			padding-top:10%;
+			span{
+				position: absolute;
+				top:-10px;
+				left:-4px;
+			}
+		}
+
+		.nav-cta{
+			width:30%;
+			border-top:2px solid white;
+			padding-top:1%;
+		}
+	}
+
+	.pageTitle{
+		h1{
+			color:$gridWhite;
+			@include mainText();
+			font-size:3em;
+			margin:3% 0;
+	
+			@media#{$tablet}{
+				text-align: center;
+				width: 100%;
+			 }
+	
+		}
+	}
+
+	
+}
 
 section#titleCap{
-
 	
 	.page-title{
 		margin: 0 auto;
 		width: 80%;
 		text-align: center;
-		
-		h1{
-			@include outlineText();
-			font-size: 3em;
-			margin: 5%;
-		
-		}
 
 		button{
-		background: #ED4040;
-		width: 80px;
-		color: #fff;
-		padding: 15px;
-		}
-
-		.snippet{
-			@include mainText();
-			font-size: 1.15em;
-			line-height: 1.5em;
-			color: $gridWhite;
-			padding: 10px;
-
-			@media#{$tablet}{
-				width:50%;
-				margin: 0 auto;
-			}
-
+			width:100px;
+			height: 30px;
+			padding:1%;
+			color:white;
+			background-color: transparent;
+			border: 2px solid white;
 		}
 	}
 }
@@ -191,8 +249,8 @@ section#portfolio.layout.layout-portfolio{
 				}
 			
 				.product-card-back{
-					background-color: goldenrod;
-					color:purple;
+					background-color: $strawGold;
+					color:$strawPurple;
 					border-radius: 40%;
 					transform: rotateY(180deg);
 
@@ -222,12 +280,12 @@ section#portfolio.layout.layout-portfolio{
 						.heart{
 							width:50px;
 							height: 50px;
-							border:2px solid purple;
+							border:2px solid $strawPurple;
 							border-radius: 50%;
 						}
 
 						.heart:hover{
-							background-color:purple;
+							background-color:$strawPurple;
 							
 						}
 					}
@@ -235,8 +293,8 @@ section#portfolio.layout.layout-portfolio{
 					.prod_button{
 						width:150px;
 						padding:2%;
-						background-color:purple;
-						color:goldenrod;
+						background-color:$strawPurple;
+						color:$strawGold;
 						font-size:1.1em;
 						border-style: none;
 					}
