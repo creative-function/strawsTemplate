@@ -1158,9 +1158,9 @@ body {
 	background: #ED4040;
 	background-image: url("../img/circle_g.svg");
 	background-repeat: no-repeat;
-	background-size: 90%;
-	background-position-x: 300%;
-	background-position-y: -15%;
+	background-size: 100%;
+	background-position-x: 100%;
+	background-position-y: 0%;
 	font-family: parisine-plus-std-gris, sans-serif;
 	font-weight: 400;
 	color: white;
@@ -1175,8 +1175,8 @@ body {
 
 @media (min-width: 900px) {
 	body {
-		background-size: 85%;
-		background-position-x: 225%;
+		background-size: 80%;
+		background-position-x: 162%;
 	}
 }
 
@@ -1217,13 +1217,13 @@ section#nav-top nav .hamburger-menu {
 
 section#nav-top nav .hamburger-menu .xtra {
 	align-self: center;
-	opacity: 0;
+	display: none;
 	text-decoration: none;
 }
 
 @media (min-width: 767px) {
 	section#nav-top nav .hamburger-menu .xtra {
-		opacity: 1;
+		display: block;
 	}
 }
 
@@ -1376,14 +1376,15 @@ section#hero .hero-desc-section {
 		-webkit-box-orient: horizontal;
 		-webkit-box-direction: normal;
 		        flex-direction: row;
-		max-width: 900px;
+		max-width: 1200px;
 	}
 }
 
 @media (min-width: 900px) {
 	section#hero .hero-desc-section .hero-title {
 		width: 100%;
-		max-width: 400px;
+		position: relative;
+		top: -85px;
 		align-self: center;
 	}
 }
@@ -1392,7 +1393,7 @@ section#hero .hero-desc-section .hero-title h1 {
 	font-family: parisine-plus-std-gris, sans-serif;
 	font-weight: 700;
 	color: transparent;
-	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-width: 2px;
 	-webkit-text-stroke-color: white;
 	font-size: 4.5em;
 }
@@ -1400,6 +1401,12 @@ section#hero .hero-desc-section .hero-title h1 {
 @media (min-width: 767px) {
 	section#hero .hero-desc-section .hero-title h1 {
 		font-size: 5.4em;
+	}
+}
+
+@media (min-width: 900px) {
+	section#hero .hero-desc-section .hero-title h1 {
+		font-size: 7em;
 	}
 }
 
@@ -1416,8 +1423,8 @@ section#hero .hero-desc-section .hero-title p {
 
 @media (min-width: 900px) {
 	section#hero .hero-desc-section .hero-title p {
-		width: 90%;
-		font-size: .78em;
+		width: 100%;
+		font-size: 1em;
 	}
 }
 
@@ -1432,9 +1439,10 @@ section#hero .hero-desc-section .hero-title .jmp_2 {
 		-webkit-box-pack: justify;
 		        justify-content: space-between;
 		width: 92%;
+		margin-top: 5%;
 	}
 	section#hero .hero-desc-section .hero-title .jmp_2 button {
-		width: 100px;
+		width: 125px;
 		height: 30px;
 		padding: 1%;
 		color: white;
@@ -1532,14 +1540,14 @@ section#hero .hero-desc-section .hero-cta .hero-section_top .hero-desc-img {
 @media (min-width: 767px) {
 	section#hero .hero-desc-section .hero-cta .hero-section_top .hero-desc-img {
 		width: 35%;
-		right: 0px;
+		right: 80px;
 	}
 }
 
 @media (min-width: 900px) {
 	section#hero .hero-desc-section .hero-cta .hero-section_top .hero-desc-img {
-		width: 62%;
-		max-width: 62%;
+		width: 70%;
+		max-width: 70%;
 	}
 }
 

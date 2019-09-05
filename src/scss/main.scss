@@ -40,9 +40,9 @@ body {
 	background: $gridRed;
 	background-image: url("../img/circle_g.svg");
 	background-repeat: no-repeat;
-	background-size: 90%;
-	background-position-x:300%; 
-	background-position-y:-15%; 
+	background-size: 100%;
+	background-position-x:100%; 
+	background-position-y:0%; 
 	@include mainText();
 
 	@media#{$tablet}{
@@ -51,8 +51,8 @@ body {
 	}
 
 	@media#{$desktop}{
-		background-size: 85%;
-		background-position-x:225%;
+		background-size: 80%;
+		background-position-x:162%;
 	}
 
 }
@@ -85,11 +85,11 @@ section#nav-top{
 
 			.xtra{
 				align-self: center;
-				opacity: 0;
+				display:none;
 				text-decoration: none;
 
 				@media#{$tablet}{
-					opacity: 1;
+					display:block;
 				}
 			
 			}
@@ -221,13 +221,14 @@ section#hero{
 		@media#{$desktop}{
 			width:98%;
 			flex-direction: row;
-			max-width: 900px;
+			max-width: 1200px;
 		}
 
 		.hero-title{
 			@media#{$desktop}{
 				width:100%;
-				max-width: 400px;
+				position: relative;
+				top: -85px;
 				align-self: center;
 			}
 			h1{
@@ -235,6 +236,9 @@ section#hero{
 				font-size: 4.5em;
 				@media#{$tablet}{
 					font-size: 5.4em;
+				}
+				@media#{$desktop}{
+					font-size: 7em;
 				}
 			}
 			p{
@@ -244,8 +248,8 @@ section#hero{
 					width:55%;
 				}
 				@media#{$desktop}{
-					width:90%;
-					font-size:.78em;
+					width:100%;
+					font-size:1em;
 				}
 			}
 	
@@ -255,10 +259,11 @@ section#hero{
 					display:flex;
 					justify-content: space-between;
 					width:92%;
+					margin-top:5%;
 					
 
 					button{
-						width:100px;
+						width:125px;
 						height: 30px;
 						padding:1%;
 						color:white;
@@ -323,11 +328,11 @@ section#hero{
 
 					@media#{$tablet}{
 						width:35%;
-						right:0px;
+						right:80px;
 					}
 					@media#{$desktop}{
-						width:62%;
-						max-width: 62%;
+						width:70%;
+						max-width: 70%;
 					}
 					img.hero-img{
 						width: 100%;
@@ -439,7 +444,7 @@ section#parallax{
 					
 
 					.allBlobImgs{
-					visibility: hidden;
+						visibility: hidden;
 					}
 
 				}
